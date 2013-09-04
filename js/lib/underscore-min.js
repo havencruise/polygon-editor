@@ -1,929 +1,1246 @@
-
-
-
-<!DOCTYPE html>
-<html>
-  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>underscore/underscore-min.js at master · jashkenas/underscore</title>
-    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
-    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
-    <link rel="logo" type="image/svg" href="https://github-media-downloads.s3.amazonaws.com/github-logo.svg" />
-    <meta property="og:image" content="https://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png">
-    <meta name="hostname" content="github-fe126-cp1-prd.iad.github.net">
-    <meta name="ruby" content="ruby 1.9.3p194-tcs-github-tcmalloc (2012-05-25, TCS patched 2012-05-27, GitHub v1.0.32) [x86_64-linux]">
-    <link rel="assets" href="https://github.global.ssl.fastly.net/">
-    <link rel="xhr-socket" href="/_sockets" />
-    
-    
-
-
-    <meta name="msapplication-TileImage" content="/windows-tile.png" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="selected-link" value="repo_source" data-pjax-transient />
-    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="1322004" name="octolytics-actor-id" /><meta content="havencruise" name="octolytics-actor-login" /><meta content="f46619e7e55b5677ee3297fc77c8b90b1bcadedc76d176f6c02da5abf546470f" name="octolytics-actor-hash" />
-    
-
-    
-    
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
-    <meta content="authenticity_token" name="csrf-param" />
-<meta content="CMrrrNN/SGE7Pf/x5CdWCK8B8dDdJyf8/hBCw2Gypss=" name="csrf-token" />
-
-    <link href="https://github.global.ssl.fastly.net/assets/github-d5cd1fc5dca65c99b46e668177e3ecc40eb1bfa5.css" media="all" rel="stylesheet" type="text/css" />
-    <link href="https://github.global.ssl.fastly.net/assets/github2-672985c1cda50a743fddd61eda75c37c004fb1c8.css" media="all" rel="stylesheet" type="text/css" />
-    
-
-
-      <script src="https://github.global.ssl.fastly.net/assets/frameworks-f86a2975a82dceee28e5afe598d1ebbfd7109d79.js" type="text/javascript"></script>
-      <script src="https://github.global.ssl.fastly.net/assets/github-ce70cd547d6648c05eec7a51795027042b78b9ce.js" type="text/javascript"></script>
-      
-      <meta http-equiv="x-pjax-version" content="b404b93347026b7bee9187a7262e1ccd">
-
-        <link data-pjax-transient rel='permalink' href='/jashkenas/underscore/blob/471d86e758aa8ed0fc74cd7db9680fe83e0b2f8f/underscore-min.js'>
-  <meta property="og:title" content="underscore"/>
-  <meta property="og:type" content="githubog:gitrepository"/>
-  <meta property="og:url" content="https://github.com/jashkenas/underscore"/>
-  <meta property="og:image" content="https://github.global.ssl.fastly.net/images/gravatars/gravatar-user-420.png"/>
-  <meta property="og:site_name" content="GitHub"/>
-  <meta property="og:description" content="underscore - JavaScript&#39;s utility _ belt"/>
-
-  <meta name="description" content="underscore - JavaScript&#39;s utility _ belt" />
-
-  <meta content="4732" name="octolytics-dimension-user_id" /><meta content="jashkenas" name="octolytics-dimension-user_login" /><meta content="349241" name="octolytics-dimension-repository_id" /><meta content="jashkenas/underscore" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="349241" name="octolytics-dimension-repository_network_root_id" /><meta content="jashkenas/underscore" name="octolytics-dimension-repository_network_root_nwo" />
-  <link href="https://github.com/jashkenas/underscore/commits/master.atom" rel="alternate" title="Recent Commits to underscore:master" type="application/atom+xml" />
-
-  </head>
-
-
-  <body class="logged_in page-blob macintosh vis-public env-production ">
-
-    <div class="wrapper">
-      
-      
-      
-
-
-      <div class="header header-logged-in true">
-  <div class="container clearfix">
-
-    <a class="header-logo-invertocat" href="https://github.com/">
-  <span class="mega-octicon octicon-mark-github"></span>
-</a>
-
-    <div class="divider-vertical"></div>
-
-    
-    <a href="/notifications" class="notification-indicator tooltipped downwards" data-gotokey="n" title="You have no unread notifications">
-        <span class="mail-status all-read"></span>
-</a>    <div class="divider-vertical"></div>
-
-
-      <div class="command-bar js-command-bar  in-repository">
-          <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
-
-<input type="text" data-hotkey="/ s" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
-    
-    data-username="havencruise"
-      data-repo="jashkenas/underscore"
-      data-branch="master"
-      data-sha="dc11e698a3fc143c6677c78715b8166d55c3a979"
-  >
-
-    <input type="hidden" name="nwo" value="jashkenas/underscore" />
-
-    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
-      <span class="minibutton select-menu-button js-menu-target">
-        <span class="js-select-button">This repository</span>
-      </span>
-
-      <div class="select-menu-modal-holder js-menu-content js-navigation-container">
-        <div class="select-menu-modal">
-
-          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
-            <span class="select-menu-item-icon octicon octicon-check"></span>
-            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
-            <div class="select-menu-item-text js-select-button-text">This repository</div>
-          </div> <!-- /.select-menu-item -->
-
-          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
-            <span class="select-menu-item-icon octicon octicon-check"></span>
-            <input type="radio" name="search_target" value="global" />
-            <div class="select-menu-item-text js-select-button-text">All repositories</div>
-          </div> <!-- /.select-menu-item -->
-
-        </div>
-      </div>
-    </div>
-
-  <span class="octicon help tooltipped downwards" title="Show command bar help">
-    <span class="octicon octicon-question"></span>
-  </span>
-
-
-  <input type="hidden" name="ref" value="cmdform">
-
-</form>
-        <ul class="top-nav">
-          <li class="explore"><a href="/explore">Explore</a></li>
-            <li><a href="https://gist.github.com">Gist</a></li>
-            <li><a href="/blog">Blog</a></li>
-          <li><a href="https://help.github.com">Help</a></li>
-        </ul>
-      </div>
-
-    
-
-
-  <ul id="user-links">
-    <li>
-      <a href="/havencruise" class="name">
-        <img height="20" src="https://1.gravatar.com/avatar/c242cea199d775845384caa9bbd4dff0?d=https%3A%2F%2Fidenticons.github.com%2Fd99cf5a546f9094e96d9e9a7e756463b.png&amp;s=140" width="20" /> havencruise
-      </a>
-    </li>
-
-      <li>
-        <a href="/new" id="new_repo" class="tooltipped downwards" title="Create a new repo" aria-label="Create a new repo">
-          <span class="octicon octicon-repo-create"></span>
-        </a>
-      </li>
-
-      <li>
-        <a href="/settings/profile" id="account_settings"
-          class="tooltipped downwards"
-          aria-label="Account settings "
-          title="Account settings ">
-          <span class="octicon octicon-tools"></span>
-        </a>
-      </li>
-      <li>
-        <a class="tooltipped downwards" href="/logout" data-method="post" id="logout" title="Sign out" aria-label="Sign out">
-          <span class="octicon octicon-log-out"></span>
-        </a>
-      </li>
-
-  </ul>
-
-<div class="js-new-dropdown-contents hidden">
-  
-
-<ul class="dropdown-menu">
-  <li>
-    <a href="/new"><span class="octicon octicon-repo-create"></span> New repository</a>
-  </li>
-  <li>
-    <a href="/organizations/new"><span class="octicon octicon-organization"></span> New organization</a>
-  </li>
-
-
-
-    <li class="section-title">
-      <span title="jashkenas/underscore">This repository</span>
-    </li>
-    <li>
-      <a href="/jashkenas/underscore/issues/new"><span class="octicon octicon-issue-opened"></span> New issue</a>
-    </li>
-</ul>
-
-</div>
-
-
-    
-  </div>
-</div>
-
-      
-
-      
-
-
-
-
-          <div class="site" itemscope itemtype="http://schema.org/WebPage">
-    
-    <div class="pagehead repohead instapaper_ignore readability-menu">
-      <div class="container">
-        
-
-<ul class="pagehead-actions">
-
-    <li class="subscription">
-      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="CMrrrNN/SGE7Pf/x5CdWCK8B8dDdJyf8/hBCw2Gypss=" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="349241" />
-
-    <div class="select-menu js-menu-container js-select-menu">
-        <a class="social-count js-social-count" href="/jashkenas/underscore/watchers">
-          532
-        </a>
-      <span class="minibutton select-menu-button with-count js-menu-target">
-        <span class="js-select-button">
-          <span class="octicon octicon-eye-watch"></span>
-          Watch
-        </span>
-      </span>
-
-      <div class="select-menu-modal-holder">
-        <div class="select-menu-modal subscription-menu-modal js-menu-content">
-          <div class="select-menu-header">
-            <span class="select-menu-title">Notification status</span>
-            <span class="octicon octicon-remove-close js-menu-close"></span>
-          </div> <!-- /.select-menu-header -->
-
-          <div class="select-menu-list js-navigation-container">
-
-            <div class="select-menu-item js-navigation-item selected">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <div class="select-menu-item-text">
-                <input checked="checked" id="do_included" name="do" type="radio" value="included" />
-                <h4>Not watching</h4>
-                <span class="description">You only receive notifications for discussions in which you participate or are @mentioned.</span>
-                <span class="js-select-button-text hidden-select-button-text">
-                  <span class="octicon octicon-eye-watch"></span>
-                  Watch
-                </span>
-              </div>
-            </div> <!-- /.select-menu-item -->
-
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon octicon-check"></span>
-              <div class="select-menu-item-text">
-                <input id="do_subscribed" name="do" type="radio" value="subscribed" />
-                <h4>Watching</h4>
-                <span class="description">You receive notifications for all discussions in this repository.</span>
-                <span class="js-select-button-text hidden-select-button-text">
-                  <span class="octicon octicon-eye-unwatch"></span>
-                  Unwatch
-                </span>
-              </div>
-            </div> <!-- /.select-menu-item -->
-
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <div class="select-menu-item-text">
-                <input id="do_ignore" name="do" type="radio" value="ignore" />
-                <h4>Ignoring</h4>
-                <span class="description">You do not receive any notifications for discussions in this repository.</span>
-                <span class="js-select-button-text hidden-select-button-text">
-                  <span class="octicon octicon-mute"></span>
-                  Stop ignoring
-                </span>
-              </div>
-            </div> <!-- /.select-menu-item -->
-
-          </div> <!-- /.select-menu-list -->
-
-        </div> <!-- /.select-menu-modal -->
-      </div> <!-- /.select-menu-modal-holder -->
-    </div> <!-- /.select-menu -->
-
-</form>
-    </li>
-
-  <li>
-  
-<div class="js-toggler-container js-social-container starring-container ">
-  <a href="/jashkenas/underscore/unstar" class="minibutton with-count js-toggler-target star-button starred upwards" title="Unstar this repo" data-remote="true" data-method="post" rel="nofollow">
-    <span class="octicon octicon-star-delete"></span><span class="text">Unstar</span>
-  </a>
-  <a href="/jashkenas/underscore/star" class="minibutton with-count js-toggler-target star-button unstarred upwards" title="Star this repo" data-remote="true" data-method="post" rel="nofollow">
-    <span class="octicon octicon-star"></span><span class="text">Star</span>
-  </a>
-  <a class="social-count js-social-count" href="/jashkenas/underscore/stargazers">9,192</a>
-</div>
-
-  </li>
-
-
-        <li>
-          <a href="/jashkenas/underscore/fork" class="minibutton with-count js-toggler-target fork-button lighter upwards" title="Fork this repo" rel="nofollow" data-method="post">
-            <span class="octicon octicon-git-branch-create"></span><span class="text">Fork</span>
-          </a>
-          <a href="/jashkenas/underscore/network" class="social-count">1,626</a>
-        </li>
-
-
-</ul>
-
-        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
-          <span class="repo-label"><span>public</span></span>
-          <span class="mega-octicon octicon-repo"></span>
-          <span class="author">
-            <a href="/jashkenas" class="url fn" itemprop="url" rel="author"><span itemprop="title">jashkenas</span></a></span
-          ><span class="repohead-name-divider">/</span><strong
-          ><a href="/jashkenas/underscore" class="js-current-repository js-repo-home-link">underscore</a></strong>
-
-          <span class="page-context-loader">
-            <img alt="Octocat-spinner-32" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-          </span>
-
-        </h1>
-      </div><!-- /.container -->
-    </div><!-- /.repohead -->
-
-    <div class="container">
-
-      <div class="repository-with-sidebar repo-container ">
-
-        <div class="repository-sidebar">
-            
-
-<div class="repo-nav repo-nav-full js-repository-container-pjax js-octicon-loaders">
-  <div class="repo-nav-contents">
-    <ul class="repo-menu">
-      <li class="tooltipped leftwards" title="Code">
-        <a href="/jashkenas/underscore" aria-label="Code" class="js-selected-navigation-item selected" data-gotokey="c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_tags repo_branches /jashkenas/underscore">
-          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
-          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>      </li>
-
-        <li class="tooltipped leftwards" title="Issues">
-          <a href="/jashkenas/underscore/issues" aria-label="Issues" class="js-selected-navigation-item js-disable-pjax" data-gotokey="i" data-selected-links="repo_issues /jashkenas/underscore/issues">
-            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
-            <span class='counter'>9</span>
-            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>        </li>
-
-      <li class="tooltipped leftwards" title="Pull Requests"><a href="/jashkenas/underscore/pulls" aria-label="Pull Requests" class="js-selected-navigation-item js-disable-pjax" data-gotokey="p" data-selected-links="repo_pulls /jashkenas/underscore/pulls">
-            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
-            <span class='counter'>4</span>
-            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>      </li>
-
-
-        <li class="tooltipped leftwards" title="Wiki">
-          <a href="/jashkenas/underscore/wiki" aria-label="Wiki" class="js-selected-navigation-item " data-pjax="true" data-selected-links="repo_wiki /jashkenas/underscore/wiki">
-            <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
-            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>        </li>
-    </ul>
-    <div class="repo-menu-separator"></div>
-    <ul class="repo-menu">
-
-      <li class="tooltipped leftwards" title="Pulse">
-        <a href="/jashkenas/underscore/pulse" aria-label="Pulse" class="js-selected-navigation-item " data-pjax="true" data-selected-links="pulse /jashkenas/underscore/pulse">
-          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
-          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>      </li>
-
-      <li class="tooltipped leftwards" title="Graphs">
-        <a href="/jashkenas/underscore/graphs" aria-label="Graphs" class="js-selected-navigation-item " data-pjax="true" data-selected-links="repo_graphs repo_contributors /jashkenas/underscore/graphs">
-          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
-          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>      </li>
-
-      <li class="tooltipped leftwards" title="Network">
-        <a href="/jashkenas/underscore/network" aria-label="Network" class="js-selected-navigation-item js-disable-pjax" data-selected-links="repo_network /jashkenas/underscore/network">
-          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
-          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>      </li>
-    </ul>
-
-
-  </div>
-</div>
-
-            <div class="only-with-full-nav">
-              
-
-  
-
-<div class="clone-url open"
-  data-protocol-type="http"
-  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
-  <h3><strong>HTTPS</strong> clone URL</h3>
-
-  <input type="text" class="clone js-url-field"
-         value="https://github.com/jashkenas/underscore.git" readonly="readonly">
-
-  <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/jashkenas/underscore.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
-</div>
-
-  
-
-<div class="clone-url "
-  data-protocol-type="ssh"
-  data-url="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=clone">
-  <h3><strong>SSH</strong> clone URL</h3>
-
-  <input type="text" class="clone js-url-field"
-         value="git@github.com:jashkenas/underscore.git" readonly="readonly">
-
-  <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="git@github.com:jashkenas/underscore.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
-</div>
-
-  
-
-<div class="clone-url "
-  data-protocol-type="subversion"
-  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
-  <h3><strong>Subversion</strong> checkout URL</h3>
-
-  <input type="text" class="clone js-url-field"
-         value="https://github.com/jashkenas/underscore" readonly="readonly">
-
-  <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/jashkenas/underscore" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
-</div>
-
-
-
-<p class="clone-options">You can clone with
-    <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
-    <a href="#" class="js-clone-selector" data-protocol="ssh">SSH</a>,
-    <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>,
-  and <a href="https://help.github.com/articles/which-remote-url-should-i-use">other methods.</a>
-</p>
-
-  <a href="http://mac.github.com" class="minibutton sidebar-button">
-    <span class="octicon octicon-device-desktop"></span>
-    Clone in Desktop
-  </a>
-
-
-                <a href="/jashkenas/underscore/archive/master.zip"
-                   class="minibutton sidebar-button"
-                   title="Download this repository as a zip file"
-                   rel="nofollow">
-                  <span class="octicon octicon-cloud-download"></span>
-                  Download ZIP
-                </a>
-            </div>
-        </div><!-- /.repository-sidebar -->
-
-        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
-          
-
-
-<!-- blob contrib key: blob_contributors:v21:bb9dd3499b64f61378facaa14c1db4cd -->
-<!-- blob contrib frag key: views10/v8/blob_contributors:v21:bb9dd3499b64f61378facaa14c1db4cd -->
-
-<p title="This is a placeholder element" class="js-history-link-replace hidden"></p>
-
-<a href="/jashkenas/underscore/find/master" data-pjax data-hotkey="t" style="display:none">Show File Finder</a>
-
-<div class="file-navigation">
-  
-
-
-<div class="select-menu js-menu-container js-select-menu" >
-  <span class="minibutton select-menu-button js-menu-target" data-hotkey="w"
-    data-master-branch="master"
-    data-ref="master" role="button" aria-label="Switch branches or tags">
-    <span class="octicon octicon-git-branch"></span>
-    <i>branch:</i>
-    <span class="js-select-button">master</span>
-  </span>
-
-  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
-
-    <div class="select-menu-modal">
-      <div class="select-menu-header">
-        <span class="select-menu-title">Switch branches/tags</span>
-        <span class="octicon octicon-remove-close js-menu-close"></span>
-      </div> <!-- /.select-menu-header -->
-
-      <div class="select-menu-filters">
-        <div class="select-menu-text-filter">
-          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
-        </div>
-        <div class="select-menu-tabs">
-          <ul>
-            <li class="select-menu-tab">
-              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
-            </li>
-            <li class="select-menu-tab">
-              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
-            </li>
-          </ul>
-        </div><!-- /.select-menu-tabs -->
-      </div><!-- /.select-menu-filters -->
-
-      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
-
-        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
-
-
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/blob/async/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="async" data-skip-pjax="true" rel="nofollow" title="async">async</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/blob/gh-pages/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="gh-pages" data-skip-pjax="true" rel="nofollow" title="gh-pages">gh-pages</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item selected">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/blob/master/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="master" data-skip-pjax="true" rel="nofollow" title="master">master</a>
-            </div> <!-- /.select-menu-item -->
-        </div>
-
-          <div class="select-menu-no-results">Nothing to show</div>
-      </div> <!-- /.select-menu-list -->
-
-      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
-        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
-
-
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.5.1/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.5.1" data-skip-pjax="true" rel="nofollow" title="1.5.1">1.5.1</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.5.0/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.5.0" data-skip-pjax="true" rel="nofollow" title="1.5.0">1.5.0</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.4.4/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.4.4" data-skip-pjax="true" rel="nofollow" title="1.4.4">1.4.4</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.4.3/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.4.3" data-skip-pjax="true" rel="nofollow" title="1.4.3">1.4.3</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.4.2/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.4.2" data-skip-pjax="true" rel="nofollow" title="1.4.2">1.4.2</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.4.1/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.4.1" data-skip-pjax="true" rel="nofollow" title="1.4.1">1.4.1</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.4.0/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.4.0" data-skip-pjax="true" rel="nofollow" title="1.4.0">1.4.0</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.3.3/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.3.3" data-skip-pjax="true" rel="nofollow" title="1.3.3">1.3.3</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.3.2/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.3.2" data-skip-pjax="true" rel="nofollow" title="1.3.2">1.3.2</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.3.1/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.3.1" data-skip-pjax="true" rel="nofollow" title="1.3.1">1.3.1</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.3.0/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.3.0" data-skip-pjax="true" rel="nofollow" title="1.3.0">1.3.0</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.2.4/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.2.4" data-skip-pjax="true" rel="nofollow" title="1.2.4">1.2.4</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.2.3/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.2.3" data-skip-pjax="true" rel="nofollow" title="1.2.3">1.2.3</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.2.2/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.2.2" data-skip-pjax="true" rel="nofollow" title="1.2.2">1.2.2</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.2.1/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.2.1" data-skip-pjax="true" rel="nofollow" title="1.2.1">1.2.1</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.2.0/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.2.0" data-skip-pjax="true" rel="nofollow" title="1.2.0">1.2.0</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.1.7/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.1.7" data-skip-pjax="true" rel="nofollow" title="1.1.7">1.1.7</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.1.6/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.1.6" data-skip-pjax="true" rel="nofollow" title="1.1.6">1.1.6</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.1.5/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.1.5" data-skip-pjax="true" rel="nofollow" title="1.1.5">1.1.5</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.1.4/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.1.4" data-skip-pjax="true" rel="nofollow" title="1.1.4">1.1.4</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.1.3/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.1.3" data-skip-pjax="true" rel="nofollow" title="1.1.3">1.1.3</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.1.2/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.1.2" data-skip-pjax="true" rel="nofollow" title="1.1.2">1.1.2</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.1.1/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.1.1" data-skip-pjax="true" rel="nofollow" title="1.1.1">1.1.1</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.1.0/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.1.0" data-skip-pjax="true" rel="nofollow" title="1.1.0">1.1.0</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.0.4/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.0.4" data-skip-pjax="true" rel="nofollow" title="1.0.4">1.0.4</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.0.3/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.0.3" data-skip-pjax="true" rel="nofollow" title="1.0.3">1.0.3</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.0.2/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.0.2" data-skip-pjax="true" rel="nofollow" title="1.0.2">1.0.2</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.0.1/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.0.1" data-skip-pjax="true" rel="nofollow" title="1.0.1">1.0.1</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/1.0.0/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="1.0.0" data-skip-pjax="true" rel="nofollow" title="1.0.0">1.0.0</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.6.0/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.6.0" data-skip-pjax="true" rel="nofollow" title="0.6.0">0.6.0</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.5.7/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.5.7" data-skip-pjax="true" rel="nofollow" title="0.5.7">0.5.7</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.5.5/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.5.5" data-skip-pjax="true" rel="nofollow" title="0.5.5">0.5.5</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.5.4/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.5.4" data-skip-pjax="true" rel="nofollow" title="0.5.4">0.5.4</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.5.3/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.5.3" data-skip-pjax="true" rel="nofollow" title="0.5.3">0.5.3</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.5.2/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.5.2" data-skip-pjax="true" rel="nofollow" title="0.5.2">0.5.2</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.5.1/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.5.1" data-skip-pjax="true" rel="nofollow" title="0.5.1">0.5.1</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.5.0/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.5.0" data-skip-pjax="true" rel="nofollow" title="0.5.0">0.5.0</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.4.7/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.4.7" data-skip-pjax="true" rel="nofollow" title="0.4.7">0.4.7</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.4.6/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.4.6" data-skip-pjax="true" rel="nofollow" title="0.4.6">0.4.6</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.4.5/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.4.5" data-skip-pjax="true" rel="nofollow" title="0.4.5">0.4.5</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.4.4/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.4.4" data-skip-pjax="true" rel="nofollow" title="0.4.4">0.4.4</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.4.3/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.4.3" data-skip-pjax="true" rel="nofollow" title="0.4.3">0.4.3</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.4.2/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.4.2" data-skip-pjax="true" rel="nofollow" title="0.4.2">0.4.2</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.4.1/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.4.1" data-skip-pjax="true" rel="nofollow" title="0.4.1">0.4.1</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.4.0/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.4.0" data-skip-pjax="true" rel="nofollow" title="0.4.0">0.4.0</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.3.3/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.3.3" data-skip-pjax="true" rel="nofollow" title="0.3.3">0.3.3</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.3.2/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.3.2" data-skip-pjax="true" rel="nofollow" title="0.3.2">0.3.2</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.3.1/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.3.1" data-skip-pjax="true" rel="nofollow" title="0.3.1">0.3.1</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.3.0/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.3.0" data-skip-pjax="true" rel="nofollow" title="0.3.0">0.3.0</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.2.0/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.2.0" data-skip-pjax="true" rel="nofollow" title="0.2.0">0.2.0</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.1.1/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.1.1" data-skip-pjax="true" rel="nofollow" title="0.1.1">0.1.1</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/jashkenas/underscore/tree/0.1.0/underscore-min.js" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.1.0" data-skip-pjax="true" rel="nofollow" title="0.1.0">0.1.0</a>
-            </div> <!-- /.select-menu-item -->
-        </div>
-
-        <div class="select-menu-no-results">Nothing to show</div>
-      </div> <!-- /.select-menu-list -->
-
-    </div> <!-- /.select-menu-modal -->
-  </div> <!-- /.select-menu-modal-holder -->
-</div> <!-- /.select-menu -->
-
-  <div class="breadcrumb">
-    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/jashkenas/underscore" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">underscore</span></a></span></span><span class="separator"> / </span><strong class="final-path">underscore-min.js</strong> <span class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="underscore-min.js" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
-  </div>
-</div>
-
-
-  
-  <div class="commit file-history-tease">
-    <img class="main-avatar" height="24" src="https://secure.gravatar.com/avatar/32652ed5b8fbd2ecdb1c78e9ac567b4b?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" />
-    <span class="author"><a href="/jashkenas" rel="author">jashkenas</a></span>
-    <time class="js-relative-date" datetime="2013-07-08T01:35:16-07:00" title="2013-07-08 01:35:16">July 08, 2013</time>
-    <div class="commit-title">
-        <a href="/jashkenas/underscore/commit/edbf2952c2b71f81c6449aef384bdf233a0d63bc" class="message" data-pjax="true" title="Underscore.js 1.5.1 (without unzip)">Underscore.js 1.5.1 (without unzip)</a>
-    </div>
-
-    <div class="participation">
-      <p class="quickstat"><a href="#blob_contributors_box" rel="facebox"><strong>5</strong> contributors</a></p>
-          <a class="avatar tooltipped downwards" title="jashkenas" href="/jashkenas/underscore/commits/master/underscore-min.js?author=jashkenas"><img height="20" src="https://secure.gravatar.com/avatar/32652ed5b8fbd2ecdb1c78e9ac567b4b?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="20" /></a>
-    <a class="avatar tooltipped downwards" title="ryantenney" href="/jashkenas/underscore/commits/master/underscore-min.js?author=ryantenney"><img height="20" src="https://secure.gravatar.com/avatar/4cfc9597de4269114d9457d02c5a57a5?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="20" /></a>
-    <a class="avatar tooltipped downwards" title="jdalton" href="/jashkenas/underscore/commits/master/underscore-min.js?author=jdalton"><img height="20" src="https://secure.gravatar.com/avatar/299a3d891ff1920b69c364d061007043?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="20" /></a>
-    <a class="avatar tooltipped downwards" title="creationix" href="/jashkenas/underscore/commits/master/underscore-min.js?author=creationix"><img height="20" src="https://secure.gravatar.com/avatar/c953ddd239707998340e1a6fbb3eeb46?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="20" /></a>
-    <a class="avatar tooltipped downwards" title="rfletcher" href="/jashkenas/underscore/commits/master/underscore-min.js?author=rfletcher"><img height="20" src="https://secure.gravatar.com/avatar/b1e65792c33ab7d44028dd0918e92d16?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="20" /></a>
-
-
-    </div>
-    <div id="blob_contributors_box" style="display:none">
-      <h2 class="facebox-header">Users who have contributed to this file</h2>
-      <ul class="facebox-user-list">
-        <li class="facebox-user-list-item">
-          <img height="24" src="https://secure.gravatar.com/avatar/32652ed5b8fbd2ecdb1c78e9ac567b4b?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" />
-          <a href="/jashkenas">jashkenas</a>
-        </li>
-        <li class="facebox-user-list-item">
-          <img height="24" src="https://secure.gravatar.com/avatar/4cfc9597de4269114d9457d02c5a57a5?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" />
-          <a href="/ryantenney">ryantenney</a>
-        </li>
-        <li class="facebox-user-list-item">
-          <img height="24" src="https://secure.gravatar.com/avatar/299a3d891ff1920b69c364d061007043?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" />
-          <a href="/jdalton">jdalton</a>
-        </li>
-        <li class="facebox-user-list-item">
-          <img height="24" src="https://secure.gravatar.com/avatar/c953ddd239707998340e1a6fbb3eeb46?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" />
-          <a href="/creationix">creationix</a>
-        </li>
-        <li class="facebox-user-list-item">
-          <img height="24" src="https://secure.gravatar.com/avatar/b1e65792c33ab7d44028dd0918e92d16?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="24" />
-          <a href="/rfletcher">rfletcher</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-
-<div id="files" class="bubble">
-  <div class="file">
-    <div class="meta">
-      <div class="info">
-        <span class="icon"><b class="octicon octicon-file-text"></b></span>
-        <span class="mode" title="File Mode">file</span>
-          <span>6 lines (6 sloc)</span>
-        <span>14.139 kb</span>
-      </div>
-      <div class="actions">
-        <div class="button-group">
-                <a class="minibutton tooltipped leftwards"
-                   title="Clicking this button will automatically fork this project so you can edit the file"
-                   href="/jashkenas/underscore/edit/master/underscore-min.js"
-                   data-method="post" rel="nofollow">Edit</a>
-          <a href="/jashkenas/underscore/raw/master/underscore-min.js" class="button minibutton " id="raw-url">Raw</a>
-            <a href="/jashkenas/underscore/blame/master/underscore-min.js" class="button minibutton ">Blame</a>
-          <a href="/jashkenas/underscore/commits/master/underscore-min.js" class="button minibutton " rel="nofollow">History</a>
-        </div><!-- /.button-group -->
-            <a class="minibutton danger empty-icon tooltipped downwards"
-               href="/jashkenas/underscore/delete/master/underscore-min.js"
-               title="Fork this project and delete file"
-               data-method="post" data-test-id="delete-blob-file" rel="nofollow">
-            Delete
-          </a>
-      </div><!-- /.actions -->
-
-    </div>
-        <div class="blob-wrapper data type-javascript js-blob-data">
-        <table class="file-code file-diff">
-          <tr class="file-code-line">
-            <td class="blob-line-nums">
-              <span id="L1" rel="#L1">1</span>
-<span id="L2" rel="#L2">2</span>
-<span id="L3" rel="#L3">3</span>
-<span id="L4" rel="#L4">4</span>
-<span id="L5" rel="#L5">5</span>
-<span id="L6" rel="#L6">6</span>
-
-            </td>
-            <td class="blob-line-code">
-                    <div class="highlight"><pre><div class='line' id='LC1'><span class="c1">//     Underscore.js 1.5.1</span></div><div class='line' id='LC2'><span class="c1">//     http://underscorejs.org</span></div><div class='line' id='LC3'><span class="c1">//     (c) 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters &amp; Editors</span></div><div class='line' id='LC4'><span class="c1">//     Underscore may be freely distributed under the MIT license.</span></div><div class='line' id='LC5'><span class="o">!</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="k">this</span><span class="p">,</span><span class="nx">t</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">_</span><span class="p">,</span><span class="nx">r</span><span class="o">=</span><span class="p">{},</span><span class="nx">e</span><span class="o">=</span><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span><span class="nx">u</span><span class="o">=</span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span><span class="nx">i</span><span class="o">=</span><span class="nb">Function</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span><span class="nx">a</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">push</span><span class="p">,</span><span class="nx">o</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">slice</span><span class="p">,</span><span class="nx">c</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">concat</span><span class="p">,</span><span class="nx">l</span><span class="o">=</span><span class="nx">u</span><span class="p">.</span><span class="nx">toString</span><span class="p">,</span><span class="nx">f</span><span class="o">=</span><span class="nx">u</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">,</span><span class="nx">s</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">forEach</span><span class="p">,</span><span class="nx">p</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">map</span><span class="p">,</span><span class="nx">v</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">reduce</span><span class="p">,</span><span class="nx">h</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">reduceRight</span><span class="p">,</span><span class="nx">d</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">filter</span><span class="p">,</span><span class="nx">g</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">every</span><span class="p">,</span><span class="nx">m</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">some</span><span class="p">,</span><span class="nx">y</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">,</span><span class="nx">b</span><span class="o">=</span><span class="nx">e</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">,</span><span class="nx">x</span><span class="o">=</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">,</span><span class="nx">_</span><span class="o">=</span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">,</span><span class="nx">w</span><span class="o">=</span><span class="nx">i</span><span class="p">.</span><span class="nx">bind</span><span class="p">,</span><span class="nx">j</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">n</span> <span class="k">instanceof</span> <span class="nx">j</span><span class="o">?</span><span class="nx">n</span><span class="o">:</span><span class="k">this</span> <span class="k">instanceof</span> <span class="nx">j</span><span class="o">?</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_wrapped</span><span class="o">=</span><span class="nx">n</span><span class="p">,</span><span class="k">void</span> <span class="mi">0</span><span class="p">)</span><span class="o">:</span><span class="k">new</span> <span class="nx">j</span><span class="p">(</span><span class="nx">n</span><span class="p">)};</span><span class="s2">&quot;undefined&quot;</span><span class="o">!=</span><span class="k">typeof</span> <span class="nx">exports</span><span class="o">?</span><span class="p">(</span><span class="s2">&quot;undefined&quot;</span><span class="o">!=</span><span class="k">typeof</span> <span class="nx">module</span><span class="o">&amp;&amp;</span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">exports</span><span class="o">=</span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="o">=</span><span class="nx">j</span><span class="p">),</span><span class="nx">exports</span><span class="p">.</span><span class="nx">_</span><span class="o">=</span><span class="nx">j</span><span class="p">)</span><span class="o">:</span><span class="nx">n</span><span class="p">.</span><span class="nx">_</span><span class="o">=</span><span class="nx">j</span><span class="p">,</span><span class="nx">j</span><span class="p">.</span><span class="nx">VERSION</span><span class="o">=</span><span class="s2">&quot;1.5.1&quot;</span><span class="p">;</span><span class="kd">var</span> <span class="nx">A</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">each</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">forEach</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">e</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="kc">null</span><span class="o">!=</span><span class="nx">n</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="nx">s</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">.</span><span class="nx">forEach</span><span class="o">===</span><span class="nx">s</span><span class="p">)</span><span class="nx">n</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">e</span><span class="p">);</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="o">===+</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="p">){</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">u</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="nx">i</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">&gt;</span><span class="nx">u</span><span class="p">;</span><span class="nx">u</span><span class="o">++</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">n</span><span class="p">[</span><span class="nx">u</span><span class="p">],</span><span class="nx">u</span><span class="p">,</span><span class="nx">n</span><span class="p">)</span><span class="o">===</span><span class="nx">r</span><span class="p">)</span><span class="k">return</span><span class="p">}</span><span class="k">else</span> <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">a</span> <span class="k">in</span> <span class="nx">n</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="nx">j</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">a</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="nx">t</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">n</span><span class="p">[</span><span class="nx">a</span><span class="p">],</span><span class="nx">a</span><span class="p">,</span><span class="nx">n</span><span class="p">)</span><span class="o">===</span><span class="nx">r</span><span class="p">)</span><span class="k">return</span><span class="p">};</span><span class="nx">j</span><span class="p">.</span><span class="nx">map</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">collect</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="p">[];</span><span class="k">return</span> <span class="kc">null</span><span class="o">==</span><span class="nx">n</span><span class="o">?</span><span class="nx">e</span><span class="o">:</span><span class="nx">p</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">.</span><span class="nx">map</span><span class="o">===</span><span class="nx">p</span><span class="o">?</span><span class="nx">n</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">)</span><span class="o">:</span><span class="p">(</span><span class="nx">A</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">u</span><span class="p">,</span><span class="nx">i</span><span class="p">){</span><span class="nx">e</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">u</span><span class="p">,</span><span class="nx">i</span><span class="p">))}),</span><span class="nx">e</span><span class="p">)};</span><span class="kd">var</span> <span class="nx">E</span><span class="o">=</span><span class="s2">&quot;Reduce of empty array with no initial value&quot;</span><span class="p">;</span><span class="nx">j</span><span class="p">.</span><span class="nx">reduce</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">foldl</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">inject</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">,</span><span class="nx">e</span><span class="p">){</span><span class="kd">var</span> <span class="nx">u</span><span class="o">=</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="kc">null</span><span class="o">==</span><span class="nx">n</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">n</span><span class="o">=</span><span class="p">[]),</span><span class="nx">v</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">.</span><span class="nx">reduce</span><span class="o">===</span><span class="nx">v</span><span class="p">)</span><span class="k">return</span> <span class="nx">e</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">t</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">e</span><span class="p">)),</span><span class="nx">u</span><span class="o">?</span><span class="nx">n</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">)</span><span class="o">:</span><span class="nx">n</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">t</span><span class="p">);</span><span class="k">if</span><span class="p">(</span><span class="nx">A</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">i</span><span class="p">,</span><span class="nx">a</span><span class="p">){</span><span class="nx">u</span><span class="o">?</span><span class="nx">r</span><span class="o">=</span><span class="nx">t</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">r</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">i</span><span class="p">,</span><span class="nx">a</span><span class="p">)</span><span class="o">:</span><span class="p">(</span><span class="nx">r</span><span class="o">=</span><span class="nx">n</span><span class="p">,</span><span class="nx">u</span><span class="o">=!</span><span class="mi">0</span><span class="p">)}),</span><span class="o">!</span><span class="nx">u</span><span class="p">)</span><span class="k">throw</span> <span class="k">new</span> <span class="nx">TypeError</span><span class="p">(</span><span class="nx">E</span><span class="p">);</span><span class="k">return</span> <span class="nx">r</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">reduceRight</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">foldr</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">,</span><span class="nx">e</span><span class="p">){</span><span class="kd">var</span> <span class="nx">u</span><span class="o">=</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="kc">null</span><span class="o">==</span><span class="nx">n</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">n</span><span class="o">=</span><span class="p">[]),</span><span class="nx">h</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">.</span><span class="nx">reduceRight</span><span class="o">===</span><span class="nx">h</span><span class="p">)</span><span class="k">return</span> <span class="nx">e</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">t</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">e</span><span class="p">)),</span><span class="nx">u</span><span class="o">?</span><span class="nx">n</span><span class="p">.</span><span class="nx">reduceRight</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">)</span><span class="o">:</span><span class="nx">n</span><span class="p">.</span><span class="nx">reduceRight</span><span class="p">(</span><span class="nx">t</span><span class="p">);</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="nx">i</span><span class="o">!==+</span><span class="nx">i</span><span class="p">){</span><span class="kd">var</span> <span class="nx">a</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">n</span><span class="p">);</span><span class="nx">i</span><span class="o">=</span><span class="nx">a</span><span class="p">.</span><span class="nx">length</span><span class="p">}</span><span class="k">if</span><span class="p">(</span><span class="nx">A</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">o</span><span class="p">,</span><span class="nx">c</span><span class="p">,</span><span class="nx">l</span><span class="p">){</span><span class="nx">c</span><span class="o">=</span><span class="nx">a</span><span class="o">?</span><span class="nx">a</span><span class="p">[</span><span class="o">--</span><span class="nx">i</span><span class="p">]</span><span class="o">:--</span><span class="nx">i</span><span class="p">,</span><span class="nx">u</span><span class="o">?</span><span class="nx">r</span><span class="o">=</span><span class="nx">t</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">r</span><span class="p">,</span><span class="nx">n</span><span class="p">[</span><span class="nx">c</span><span class="p">],</span><span class="nx">c</span><span class="p">,</span><span class="nx">l</span><span class="p">)</span><span class="o">:</span><span class="p">(</span><span class="nx">r</span><span class="o">=</span><span class="nx">n</span><span class="p">[</span><span class="nx">c</span><span class="p">],</span><span class="nx">u</span><span class="o">=!</span><span class="mi">0</span><span class="p">)}),</span><span class="o">!</span><span class="nx">u</span><span class="p">)</span><span class="k">throw</span> <span class="k">new</span> <span class="nx">TypeError</span><span class="p">(</span><span class="nx">E</span><span class="p">);</span><span class="k">return</span> <span class="nx">r</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">find</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">detect</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="kd">var</span> <span class="nx">e</span><span class="p">;</span><span class="k">return</span> <span class="nx">O</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">u</span><span class="p">,</span><span class="nx">i</span><span class="p">){</span><span class="k">return</span> <span class="nx">t</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">u</span><span class="p">,</span><span class="nx">i</span><span class="p">)</span><span class="o">?</span><span class="p">(</span><span class="nx">e</span><span class="o">=</span><span class="nx">n</span><span class="p">,</span><span class="o">!</span><span class="mi">0</span><span class="p">)</span><span class="o">:</span><span class="k">void</span> <span class="mi">0</span><span class="p">}),</span><span class="nx">e</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">filter</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">select</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="p">[];</span><span class="k">return</span> <span class="kc">null</span><span class="o">==</span><span class="nx">n</span><span class="o">?</span><span class="nx">e</span><span class="o">:</span><span class="nx">d</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">.</span><span class="nx">filter</span><span class="o">===</span><span class="nx">d</span><span class="o">?</span><span class="nx">n</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">)</span><span class="o">:</span><span class="p">(</span><span class="nx">A</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">u</span><span class="p">,</span><span class="nx">i</span><span class="p">){</span><span class="nx">t</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">u</span><span class="p">,</span><span class="nx">i</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="nx">e</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">n</span><span class="p">)}),</span><span class="nx">e</span><span class="p">)},</span><span class="nx">j</span><span class="p">.</span><span class="nx">reject</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">e</span><span class="p">,</span><span class="nx">u</span><span class="p">){</span><span class="k">return</span><span class="o">!</span><span class="nx">t</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">e</span><span class="p">,</span><span class="nx">u</span><span class="p">)},</span><span class="nx">r</span><span class="p">)},</span><span class="nx">j</span><span class="p">.</span><span class="nx">every</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">all</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">e</span><span class="p">){</span><span class="nx">t</span><span class="o">||</span><span class="p">(</span><span class="nx">t</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">identity</span><span class="p">);</span><span class="kd">var</span> <span class="nx">u</span><span class="o">=!</span><span class="mi">0</span><span class="p">;</span><span class="k">return</span> <span class="kc">null</span><span class="o">==</span><span class="nx">n</span><span class="o">?</span><span class="nx">u</span><span class="o">:</span><span class="nx">g</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">.</span><span class="nx">every</span><span class="o">===</span><span class="nx">g</span><span class="o">?</span><span class="nx">n</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">e</span><span class="p">)</span><span class="o">:</span><span class="p">(</span><span class="nx">A</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">i</span><span class="p">,</span><span class="nx">a</span><span class="p">){</span><span class="k">return</span><span class="p">(</span><span class="nx">u</span><span class="o">=</span><span class="nx">u</span><span class="o">&amp;&amp;</span><span class="nx">t</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">i</span><span class="p">,</span><span class="nx">a</span><span class="p">))</span><span class="o">?</span><span class="k">void</span> <span class="mi">0</span><span class="o">:</span><span class="nx">r</span><span class="p">}),</span><span class="o">!!</span><span class="nx">u</span><span class="p">)};</span><span class="kd">var</span> <span class="nx">O</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">some</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">any</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">e</span><span class="p">){</span><span class="nx">t</span><span class="o">||</span><span class="p">(</span><span class="nx">t</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">identity</span><span class="p">);</span><span class="kd">var</span> <span class="nx">u</span><span class="o">=!</span><span class="mi">1</span><span class="p">;</span><span class="k">return</span> <span class="kc">null</span><span class="o">==</span><span class="nx">n</span><span class="o">?</span><span class="nx">u</span><span class="o">:</span><span class="nx">m</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">.</span><span class="nx">some</span><span class="o">===</span><span class="nx">m</span><span class="o">?</span><span class="nx">n</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">e</span><span class="p">)</span><span class="o">:</span><span class="p">(</span><span class="nx">A</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">i</span><span class="p">,</span><span class="nx">a</span><span class="p">){</span><span class="k">return</span> <span class="nx">u</span><span class="o">||</span><span class="p">(</span><span class="nx">u</span><span class="o">=</span><span class="nx">t</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">i</span><span class="p">,</span><span class="nx">a</span><span class="p">))</span><span class="o">?</span><span class="nx">r</span><span class="o">:</span><span class="k">void</span> <span class="mi">0</span><span class="p">}),</span><span class="o">!!</span><span class="nx">u</span><span class="p">)};</span><span class="nx">j</span><span class="p">.</span><span class="nx">contains</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">include</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="k">return</span> <span class="kc">null</span><span class="o">==</span><span class="nx">n</span><span class="o">?!</span><span class="mi">1</span><span class="o">:</span><span class="nx">y</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">.</span><span class="nx">indexOf</span><span class="o">===</span><span class="nx">y</span><span class="o">?</span><span class="nx">n</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span><span class="o">!=-</span><span class="mi">1</span><span class="o">:</span><span class="nx">O</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">n</span><span class="o">===</span><span class="nx">t</span><span class="p">})},</span><span class="nx">j</span><span class="p">.</span><span class="nx">invoke</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="nx">e</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">isFunction</span><span class="p">(</span><span class="nx">t</span><span class="p">);</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span><span class="p">(</span><span class="nx">e</span><span class="o">?</span><span class="nx">t</span><span class="o">:</span><span class="nx">n</span><span class="p">[</span><span class="nx">t</span><span class="p">]).</span><span class="nx">apply</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">r</span><span class="p">)})},</span><span class="nx">j</span><span class="p">.</span><span class="nx">pluck</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">n</span><span class="p">[</span><span class="nx">t</span><span class="p">]})},</span><span class="nx">j</span><span class="p">.</span><span class="nx">where</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">isEmpty</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span><span class="o">?</span><span class="nx">r</span><span class="o">?</span><span class="k">void</span> <span class="mi">0</span><span class="o">:</span><span class="p">[]</span><span class="o">:</span><span class="nx">j</span><span class="p">[</span><span class="nx">r</span><span class="o">?</span><span class="s2">&quot;find&quot;</span><span class="o">:</span><span class="s2">&quot;filter&quot;</span><span class="p">](</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">r</span> <span class="k">in</span> <span class="nx">t</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="nx">t</span><span class="p">[</span><span class="nx">r</span><span class="p">]</span><span class="o">!==</span><span class="nx">n</span><span class="p">[</span><span class="nx">r</span><span class="p">])</span><span class="k">return</span><span class="o">!</span><span class="mi">1</span><span class="p">;</span><span class="k">return</span><span class="o">!</span><span class="mi">0</span><span class="p">})},</span><span class="nx">j</span><span class="p">.</span><span class="nx">findWhere</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">where</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="o">!</span><span class="mi">0</span><span class="p">)},</span><span class="nx">j</span><span class="p">.</span><span class="nx">max</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">t</span><span class="o">&amp;&amp;</span><span class="nx">j</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">===+</span><span class="nx">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="o">&lt;</span><span class="mi">65535</span><span class="p">)</span><span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nb">Math</span><span class="p">,</span><span class="nx">n</span><span class="p">);</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">t</span><span class="o">&amp;&amp;</span><span class="nx">j</span><span class="p">.</span><span class="nx">isEmpty</span><span class="p">(</span><span class="nx">n</span><span class="p">))</span><span class="k">return</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="p">;</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="p">{</span><span class="nx">computed</span><span class="o">:-</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="p">,</span><span class="nx">value</span><span class="o">:-</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="p">};</span><span class="k">return</span> <span class="nx">A</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">u</span><span class="p">,</span><span class="nx">i</span><span class="p">){</span><span class="kd">var</span> <span class="nx">a</span><span class="o">=</span><span class="nx">t</span><span class="o">?</span><span class="nx">t</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">u</span><span class="p">,</span><span class="nx">i</span><span class="p">)</span><span class="o">:</span><span class="nx">n</span><span class="p">;</span><span class="nx">a</span><span class="o">&gt;</span><span class="nx">e</span><span class="p">.</span><span class="nx">computed</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">e</span><span class="o">=</span><span class="p">{</span><span class="nx">value</span><span class="o">:</span><span class="nx">n</span><span class="p">,</span><span class="nx">computed</span><span class="o">:</span><span class="nx">a</span><span class="p">})}),</span><span class="nx">e</span><span class="p">.</span><span class="nx">value</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">min</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">t</span><span class="o">&amp;&amp;</span><span class="nx">j</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">===+</span><span class="nx">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="o">&lt;</span><span class="mi">65535</span><span class="p">)</span><span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nb">Math</span><span class="p">,</span><span class="nx">n</span><span class="p">);</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">t</span><span class="o">&amp;&amp;</span><span class="nx">j</span><span class="p">.</span><span class="nx">isEmpty</span><span class="p">(</span><span class="nx">n</span><span class="p">))</span><span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="p">;</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="p">{</span><span class="nx">computed</span><span class="o">:</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="p">,</span><span class="nx">value</span><span class="o">:</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="p">};</span><span class="k">return</span> <span class="nx">A</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">u</span><span class="p">,</span><span class="nx">i</span><span class="p">){</span><span class="kd">var</span> <span class="nx">a</span><span class="o">=</span><span class="nx">t</span><span class="o">?</span><span class="nx">t</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">u</span><span class="p">,</span><span class="nx">i</span><span class="p">)</span><span class="o">:</span><span class="nx">n</span><span class="p">;</span><span class="nx">a</span><span class="o">&lt;</span><span class="nx">e</span><span class="p">.</span><span class="nx">computed</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">e</span><span class="o">=</span><span class="p">{</span><span class="nx">value</span><span class="o">:</span><span class="nx">n</span><span class="p">,</span><span class="nx">computed</span><span class="o">:</span><span class="nx">a</span><span class="p">})}),</span><span class="nx">e</span><span class="p">.</span><span class="nx">value</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">shuffle</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="nx">e</span><span class="o">=</span><span class="p">[];</span><span class="k">return</span> <span class="nx">A</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="nx">t</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">random</span><span class="p">(</span><span class="nx">r</span><span class="o">++</span><span class="p">),</span><span class="nx">e</span><span class="p">[</span><span class="nx">r</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="nx">e</span><span class="p">[</span><span class="nx">t</span><span class="p">],</span><span class="nx">e</span><span class="p">[</span><span class="nx">t</span><span class="p">]</span><span class="o">=</span><span class="nx">n</span><span class="p">}),</span><span class="nx">e</span><span class="p">};</span><span class="kd">var</span> <span class="nx">F</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">isFunction</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">?</span><span class="nx">n</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">){</span><span class="k">return</span> <span class="nx">t</span><span class="p">[</span><span class="nx">n</span><span class="p">]}};</span><span class="nx">j</span><span class="p">.</span><span class="nx">sortBy</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="nx">F</span><span class="p">(</span><span class="nx">t</span><span class="p">);</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">pluck</span><span class="p">(</span><span class="nx">j</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">u</span><span class="p">){</span><span class="k">return</span><span class="p">{</span><span class="nx">value</span><span class="o">:</span><span class="nx">n</span><span class="p">,</span><span class="nx">index</span><span class="o">:</span><span class="nx">t</span><span class="p">,</span><span class="nx">criteria</span><span class="o">:</span><span class="nx">e</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">u</span><span class="p">)}}).</span><span class="nx">sort</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">criteria</span><span class="p">,</span><span class="nx">e</span><span class="o">=</span><span class="nx">t</span><span class="p">.</span><span class="nx">criteria</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="nx">r</span><span class="o">!==</span><span class="nx">e</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nx">r</span><span class="o">&gt;</span><span class="nx">e</span><span class="o">||</span><span class="nx">r</span><span class="o">===</span><span class="k">void</span> <span class="mi">0</span><span class="p">)</span><span class="k">return</span> <span class="mi">1</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="nx">e</span><span class="o">&gt;</span><span class="nx">r</span><span class="o">||</span><span class="nx">e</span><span class="o">===</span><span class="k">void</span> <span class="mi">0</span><span class="p">)</span><span class="k">return</span><span class="o">-</span><span class="mi">1</span><span class="p">}</span><span class="k">return</span> <span class="nx">n</span><span class="p">.</span><span class="nx">index</span><span class="o">&lt;</span><span class="nx">t</span><span class="p">.</span><span class="nx">index</span><span class="o">?-</span><span class="mi">1</span><span class="o">:</span><span class="mi">1</span><span class="p">}),</span><span class="s2">&quot;value&quot;</span><span class="p">)};</span><span class="kd">var</span> <span class="nx">k</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">,</span><span class="nx">e</span><span class="p">){</span><span class="kd">var</span> <span class="nx">u</span><span class="o">=</span><span class="p">{},</span><span class="nx">i</span><span class="o">=</span><span class="nx">F</span><span class="p">(</span><span class="kc">null</span><span class="o">==</span><span class="nx">t</span><span class="o">?</span><span class="nx">j</span><span class="p">.</span><span class="nx">identity</span><span class="o">:</span><span class="nx">t</span><span class="p">);</span><span class="k">return</span> <span class="nx">A</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">a</span><span class="p">){</span><span class="kd">var</span> <span class="nx">o</span><span class="o">=</span><span class="nx">i</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">a</span><span class="p">,</span><span class="nx">n</span><span class="p">);</span><span class="nx">e</span><span class="p">(</span><span class="nx">u</span><span class="p">,</span><span class="nx">o</span><span class="p">,</span><span class="nx">t</span><span class="p">)}),</span><span class="nx">u</span><span class="p">};</span><span class="nx">j</span><span class="p">.</span><span class="nx">groupBy</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="k">return</span> <span class="nx">k</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){(</span><span class="nx">j</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">)</span><span class="o">?</span><span class="nx">n</span><span class="p">[</span><span class="nx">t</span><span class="p">]</span><span class="o">:</span><span class="nx">n</span><span class="p">[</span><span class="nx">t</span><span class="p">]</span><span class="o">=</span><span class="p">[]).</span><span class="nx">push</span><span class="p">(</span><span class="nx">r</span><span class="p">)})},</span><span class="nx">j</span><span class="p">.</span><span class="nx">countBy</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="k">return</span> <span class="nx">k</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="nx">j</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">)</span><span class="o">||</span><span class="p">(</span><span class="nx">n</span><span class="p">[</span><span class="nx">t</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span><span class="nx">n</span><span class="p">[</span><span class="nx">t</span><span class="p">]</span><span class="o">++</span><span class="p">})},</span><span class="nx">j</span><span class="p">.</span><span class="nx">sortedIndex</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">,</span><span class="nx">e</span><span class="p">){</span><span class="nx">r</span><span class="o">=</span><span class="kc">null</span><span class="o">==</span><span class="nx">r</span><span class="o">?</span><span class="nx">j</span><span class="p">.</span><span class="nx">identity</span><span class="o">:</span><span class="nx">F</span><span class="p">(</span><span class="nx">r</span><span class="p">);</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">u</span><span class="o">=</span><span class="nx">r</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">t</span><span class="p">),</span><span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="nx">a</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">a</span><span class="o">&gt;</span><span class="nx">i</span><span class="p">;){</span><span class="kd">var</span> <span class="nx">o</span><span class="o">=</span><span class="nx">i</span><span class="o">+</span><span class="nx">a</span><span class="o">&gt;&gt;&gt;</span><span class="mi">1</span><span class="p">;</span><span class="nx">r</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">n</span><span class="p">[</span><span class="nx">o</span><span class="p">])</span><span class="o">&lt;</span><span class="nx">u</span><span class="o">?</span><span class="nx">i</span><span class="o">=</span><span class="nx">o</span><span class="o">+</span><span class="mi">1</span><span class="o">:</span><span class="nx">a</span><span class="o">=</span><span class="nx">o</span><span class="p">}</span><span class="k">return</span> <span class="nx">i</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">toArray</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">n</span><span class="o">?</span><span class="nx">j</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">?</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">:</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="o">===+</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="o">?</span><span class="nx">j</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">j</span><span class="p">.</span><span class="nx">identity</span><span class="p">)</span><span class="o">:</span><span class="nx">j</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">:</span><span class="p">[]},</span><span class="nx">j</span><span class="p">.</span><span class="nx">size</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="kc">null</span><span class="o">==</span><span class="nx">n</span><span class="o">?</span><span class="mi">0</span><span class="o">:</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="o">===+</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="o">?</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="o">:</span><span class="nx">j</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">n</span><span class="p">).</span><span class="nx">length</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">first</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">head</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">take</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="k">return</span> <span class="kc">null</span><span class="o">==</span><span class="nx">n</span><span class="o">?</span><span class="k">void</span> <span class="mi">0</span><span class="o">:</span><span class="kc">null</span><span class="o">==</span><span class="nx">t</span><span class="o">||</span><span class="nx">r</span><span class="o">?</span><span class="nx">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">:</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="nx">t</span><span class="p">)},</span><span class="nx">j</span><span class="p">.</span><span class="nx">initial</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="k">return</span> <span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="p">(</span><span class="kc">null</span><span class="o">==</span><span class="nx">t</span><span class="o">||</span><span class="nx">r</span><span class="o">?</span><span class="mi">1</span><span class="o">:</span><span class="nx">t</span><span class="p">))},</span><span class="nx">j</span><span class="p">.</span><span class="nx">last</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="k">return</span> <span class="kc">null</span><span class="o">==</span><span class="nx">n</span><span class="o">?</span><span class="k">void</span> <span class="mi">0</span><span class="o">:</span><span class="kc">null</span><span class="o">==</span><span class="nx">t</span><span class="o">||</span><span class="nx">r</span><span class="o">?</span><span class="nx">n</span><span class="p">[</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">:</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="nx">t</span><span class="p">,</span><span class="mi">0</span><span class="p">))},</span><span class="nx">j</span><span class="p">.</span><span class="nx">rest</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">tail</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">drop</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="k">return</span> <span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kc">null</span><span class="o">==</span><span class="nx">t</span><span class="o">||</span><span class="nx">r</span><span class="o">?</span><span class="mi">1</span><span class="o">:</span><span class="nx">t</span><span class="p">)},</span><span class="nx">j</span><span class="p">.</span><span class="nx">compact</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">j</span><span class="p">.</span><span class="nx">identity</span><span class="p">)};</span><span class="kd">var</span> <span class="nx">R</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="k">return</span> <span class="nx">t</span><span class="o">&amp;&amp;</span><span class="nx">j</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">j</span><span class="p">.</span><span class="nx">isArray</span><span class="p">)</span><span class="o">?</span><span class="nx">c</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">n</span><span class="p">)</span><span class="o">:</span><span class="p">(</span><span class="nx">A</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="nx">j</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">||</span><span class="nx">j</span><span class="p">.</span><span class="nx">isArguments</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">?</span><span class="nx">t</span><span class="o">?</span><span class="nx">a</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">n</span><span class="p">)</span><span class="o">:</span><span class="nx">R</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">)</span><span class="o">:</span><span class="nx">r</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">n</span><span class="p">)}),</span><span class="nx">r</span><span class="p">)};</span><span class="nx">j</span><span class="p">.</span><span class="nx">flatten</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="k">return</span> <span class="nx">R</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,[])},</span><span class="nx">j</span><span class="p">.</span><span class="nx">without</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">difference</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span><span class="mi">1</span><span class="p">))},</span><span class="nx">j</span><span class="p">.</span><span class="nx">uniq</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">unique</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">,</span><span class="nx">e</span><span class="p">){</span><span class="nx">j</span><span class="p">.</span><span class="nx">isFunction</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">e</span><span class="o">=</span><span class="nx">r</span><span class="p">,</span><span class="nx">r</span><span class="o">=</span><span class="nx">t</span><span class="p">,</span><span class="nx">t</span><span class="o">=!</span><span class="mi">1</span><span class="p">);</span><span class="kd">var</span> <span class="nx">u</span><span class="o">=</span><span class="nx">r</span><span class="o">?</span><span class="nx">j</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">r</span><span class="p">,</span><span class="nx">e</span><span class="p">)</span><span class="o">:</span><span class="nx">n</span><span class="p">,</span><span class="nx">i</span><span class="o">=</span><span class="p">[],</span><span class="nx">a</span><span class="o">=</span><span class="p">[];</span><span class="k">return</span> <span class="nx">A</span><span class="p">(</span><span class="nx">u</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">e</span><span class="p">){(</span><span class="nx">t</span><span class="o">?</span><span class="nx">e</span><span class="o">&amp;&amp;</span><span class="nx">a</span><span class="p">[</span><span class="nx">a</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">===</span><span class="nx">r</span><span class="o">:</span><span class="nx">j</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">r</span><span class="p">))</span><span class="o">||</span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">r</span><span class="p">),</span><span class="nx">i</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">n</span><span class="p">[</span><span class="nx">e</span><span class="p">]))}),</span><span class="nx">i</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">union</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">uniq</span><span class="p">(</span><span class="nx">j</span><span class="p">.</span><span class="nx">flatten</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span><span class="o">!</span><span class="mi">0</span><span class="p">))},</span><span class="nx">j</span><span class="p">.</span><span class="nx">intersection</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">j</span><span class="p">.</span><span class="nx">uniq</span><span class="p">(</span><span class="nx">n</span><span class="p">),</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">){</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">n</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">})})},</span><span class="nx">j</span><span class="p">.</span><span class="nx">difference</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="nx">c</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span><span class="o">!</span><span class="nx">j</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">n</span><span class="p">)})},</span><span class="nx">j</span><span class="p">.</span><span class="nx">zip</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">j</span><span class="p">.</span><span class="nx">pluck</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span><span class="s2">&quot;length&quot;</span><span class="p">).</span><span class="nx">concat</span><span class="p">(</span><span class="mi">0</span><span class="p">)),</span><span class="nx">t</span><span class="o">=</span><span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">n</span><span class="p">),</span><span class="nx">r</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">n</span><span class="o">&gt;</span><span class="nx">r</span><span class="p">;</span><span class="nx">r</span><span class="o">++</span><span class="p">)</span><span class="nx">t</span><span class="p">[</span><span class="nx">r</span><span class="p">]</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">pluck</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="o">+</span><span class="nx">r</span><span class="p">);</span><span class="k">return</span> <span class="nx">t</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">object</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="kc">null</span><span class="o">==</span><span class="nx">n</span><span class="p">)</span><span class="k">return</span><span class="p">{};</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="p">{},</span><span class="nx">e</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="nx">u</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">u</span><span class="o">&gt;</span><span class="nx">e</span><span class="p">;</span><span class="nx">e</span><span class="o">++</span><span class="p">)</span><span class="nx">t</span><span class="o">?</span><span class="nx">r</span><span class="p">[</span><span class="nx">n</span><span class="p">[</span><span class="nx">e</span><span class="p">]]</span><span class="o">=</span><span class="nx">t</span><span class="p">[</span><span class="nx">e</span><span class="p">]</span><span class="o">:</span><span class="nx">r</span><span class="p">[</span><span class="nx">n</span><span class="p">[</span><span class="nx">e</span><span class="p">][</span><span class="mi">0</span><span class="p">]]</span><span class="o">=</span><span class="nx">n</span><span class="p">[</span><span class="nx">e</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span><span class="k">return</span> <span class="nx">r</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">indexOf</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="kc">null</span><span class="o">==</span><span class="nx">n</span><span class="p">)</span><span class="k">return</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="nx">u</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="nx">r</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="s2">&quot;number&quot;</span><span class="o">!=</span><span class="k">typeof</span> <span class="nx">r</span><span class="p">)</span><span class="k">return</span> <span class="nx">e</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">sortedIndex</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">),</span><span class="nx">n</span><span class="p">[</span><span class="nx">e</span><span class="p">]</span><span class="o">===</span><span class="nx">t</span><span class="o">?</span><span class="nx">e</span><span class="o">:-</span><span class="mi">1</span><span class="p">;</span><span class="nx">e</span><span class="o">=</span><span class="mi">0</span><span class="o">&gt;</span><span class="nx">r</span><span class="o">?</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nx">u</span><span class="o">+</span><span class="nx">r</span><span class="p">)</span><span class="o">:</span><span class="nx">r</span><span class="p">}</span><span class="k">if</span><span class="p">(</span><span class="nx">y</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">.</span><span class="nx">indexOf</span><span class="o">===</span><span class="nx">y</span><span class="p">)</span><span class="k">return</span> <span class="nx">n</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">);</span><span class="k">for</span><span class="p">(;</span><span class="nx">u</span><span class="o">&gt;</span><span class="nx">e</span><span class="p">;</span><span class="nx">e</span><span class="o">++</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="nx">n</span><span class="p">[</span><span class="nx">e</span><span class="p">]</span><span class="o">===</span><span class="nx">t</span><span class="p">)</span><span class="k">return</span> <span class="nx">e</span><span class="p">;</span><span class="k">return</span><span class="o">-</span><span class="mi">1</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="kc">null</span><span class="o">==</span><span class="nx">n</span><span class="p">)</span><span class="k">return</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="kc">null</span><span class="o">!=</span><span class="nx">r</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="nx">b</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="o">===</span><span class="nx">b</span><span class="p">)</span><span class="k">return</span> <span class="nx">e</span><span class="o">?</span><span class="nx">n</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">)</span><span class="o">:</span><span class="nx">n</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="nx">t</span><span class="p">);</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">u</span><span class="o">=</span><span class="nx">e</span><span class="o">?</span><span class="nx">r</span><span class="o">:</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">u</span><span class="o">--</span><span class="p">;)</span><span class="k">if</span><span class="p">(</span><span class="nx">n</span><span class="p">[</span><span class="nx">u</span><span class="p">]</span><span class="o">===</span><span class="nx">t</span><span class="p">)</span><span class="k">return</span> <span class="nx">u</span><span class="p">;</span><span class="k">return</span><span class="o">-</span><span class="mi">1</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">range</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="o">&lt;=</span><span class="mi">1</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">t</span><span class="o">=</span><span class="nx">n</span><span class="o">||</span><span class="mi">0</span><span class="p">,</span><span class="nx">n</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span><span class="nx">r</span><span class="o">=</span><span class="nx">arguments</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">||</span><span class="mi">1</span><span class="p">;</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">((</span><span class="nx">t</span><span class="o">-</span><span class="nx">n</span><span class="p">)</span><span class="o">/</span><span class="nx">r</span><span class="p">),</span><span class="mi">0</span><span class="p">),</span><span class="nx">u</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="nx">i</span><span class="o">=</span><span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span><span class="nx">e</span><span class="o">&gt;</span><span class="nx">u</span><span class="p">;)</span><span class="nx">i</span><span class="p">[</span><span class="nx">u</span><span class="o">++</span><span class="p">]</span><span class="o">=</span><span class="nx">n</span><span class="p">,</span><span class="nx">n</span><span class="o">+=</span><span class="nx">r</span><span class="p">;</span><span class="k">return</span> <span class="nx">i</span><span class="p">};</span><span class="kd">var</span> <span class="nx">M</span><span class="o">=</span><span class="kd">function</span><span class="p">(){};</span><span class="nx">j</span><span class="p">.</span><span class="nx">bind</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="kd">var</span> <span class="nx">r</span><span class="p">,</span><span class="nx">e</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="nx">w</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">.</span><span class="nx">bind</span><span class="o">===</span><span class="nx">w</span><span class="p">)</span><span class="k">return</span> <span class="nx">w</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">j</span><span class="p">.</span><span class="nx">isFunction</span><span class="p">(</span><span class="nx">n</span><span class="p">))</span><span class="k">throw</span> <span class="k">new</span> <span class="nx">TypeError</span><span class="p">;</span><span class="k">return</span> <span class="nx">r</span><span class="o">=</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="nx">e</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="k">this</span> <span class="k">instanceof</span> <span class="nx">e</span><span class="p">))</span><span class="k">return</span> <span class="nx">n</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">)));</span><span class="nx">M</span><span class="p">.</span><span class="nx">prototype</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span><span class="kd">var</span> <span class="nx">u</span><span class="o">=</span><span class="k">new</span> <span class="nx">M</span><span class="p">;</span><span class="nx">M</span><span class="p">.</span><span class="nx">prototype</span><span class="o">=</span><span class="kc">null</span><span class="p">;</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">u</span><span class="p">,</span><span class="nx">r</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">)));</span><span class="k">return</span> <span class="nb">Object</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="o">===</span><span class="nx">i</span><span class="o">?</span><span class="nx">i</span><span class="o">:</span><span class="nx">u</span><span class="p">}},</span><span class="nx">j</span><span class="p">.</span><span class="nx">partial</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="k">return</span> <span class="kd">function</span><span class="p">(){</span><span class="k">return</span> <span class="nx">n</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">t</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">)))}},</span><span class="nx">j</span><span class="p">.</span><span class="nx">bindAll</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="k">if</span><span class="p">(</span><span class="mi">0</span><span class="o">===</span><span class="nx">t</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&quot;bindAll must be passed function names&quot;</span><span class="p">);</span><span class="k">return</span> <span class="nx">A</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">){</span><span class="nx">n</span><span class="p">[</span><span class="nx">t</span><span class="p">]</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nx">n</span><span class="p">[</span><span class="nx">t</span><span class="p">],</span><span class="nx">n</span><span class="p">)}),</span><span class="nx">n</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">memoize</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="p">{};</span><span class="k">return</span> <span class="nx">t</span><span class="o">||</span><span class="p">(</span><span class="nx">t</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">identity</span><span class="p">),</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="nx">t</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">arguments</span><span class="p">);</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">e</span><span class="p">)</span><span class="o">?</span><span class="nx">r</span><span class="p">[</span><span class="nx">e</span><span class="p">]</span><span class="o">:</span><span class="nx">r</span><span class="p">[</span><span class="nx">e</span><span class="p">]</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">arguments</span><span class="p">)}},</span><span class="nx">j</span><span class="p">.</span><span class="nx">delay</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="k">return</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span><span class="k">return</span> <span class="nx">n</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="nx">r</span><span class="p">)},</span><span class="nx">t</span><span class="p">)},</span><span class="nx">j</span><span class="p">.</span><span class="nx">defer</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">delay</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">j</span><span class="p">,[</span><span class="nx">n</span><span class="p">,</span><span class="mi">1</span><span class="p">].</span><span class="nx">concat</span><span class="p">(</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span><span class="mi">1</span><span class="p">)))},</span><span class="nx">j</span><span class="p">.</span><span class="nx">throttle</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="kd">var</span> <span class="nx">e</span><span class="p">,</span><span class="nx">u</span><span class="p">,</span><span class="nx">i</span><span class="p">,</span><span class="nx">a</span><span class="o">=</span><span class="kc">null</span><span class="p">,</span><span class="nx">o</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">r</span><span class="o">||</span><span class="p">(</span><span class="nx">r</span><span class="o">=</span><span class="p">{});</span><span class="kd">var</span> <span class="nx">c</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="nx">o</span><span class="o">=</span><span class="nx">r</span><span class="p">.</span><span class="nx">leading</span><span class="o">===!</span><span class="mi">1</span><span class="o">?</span><span class="mi">0</span><span class="o">:</span><span class="k">new</span> <span class="nb">Date</span><span class="p">,</span><span class="nx">a</span><span class="o">=</span><span class="kc">null</span><span class="p">,</span><span class="nx">i</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">u</span><span class="p">)};</span><span class="k">return</span> <span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">l</span><span class="o">=</span><span class="k">new</span> <span class="nb">Date</span><span class="p">;</span><span class="nx">o</span><span class="o">||</span><span class="nx">r</span><span class="p">.</span><span class="nx">leading</span><span class="o">!==!</span><span class="mi">1</span><span class="o">||</span><span class="p">(</span><span class="nx">o</span><span class="o">=</span><span class="nx">l</span><span class="p">);</span><span class="kd">var</span> <span class="nx">f</span><span class="o">=</span><span class="nx">t</span><span class="o">-</span><span class="p">(</span><span class="nx">l</span><span class="o">-</span><span class="nx">o</span><span class="p">);</span><span class="k">return</span> <span class="nx">e</span><span class="o">=</span><span class="k">this</span><span class="p">,</span><span class="nx">u</span><span class="o">=</span><span class="nx">arguments</span><span class="p">,</span><span class="mi">0</span><span class="o">&gt;=</span><span class="nx">f</span><span class="o">?</span><span class="p">(</span><span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">a</span><span class="p">),</span><span class="nx">a</span><span class="o">=</span><span class="kc">null</span><span class="p">,</span><span class="nx">o</span><span class="o">=</span><span class="nx">l</span><span class="p">,</span><span class="nx">i</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">u</span><span class="p">))</span><span class="o">:</span><span class="nx">a</span><span class="o">||</span><span class="nx">r</span><span class="p">.</span><span class="nx">trailing</span><span class="o">===!</span><span class="mi">1</span><span class="o">||</span><span class="p">(</span><span class="nx">a</span><span class="o">=</span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">c</span><span class="p">,</span><span class="nx">f</span><span class="p">)),</span><span class="nx">i</span><span class="p">}},</span><span class="nx">j</span><span class="p">.</span><span class="nx">debounce</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="kd">var</span> <span class="nx">e</span><span class="p">,</span><span class="nx">u</span><span class="o">=</span><span class="kc">null</span><span class="p">;</span><span class="k">return</span> <span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="k">this</span><span class="p">,</span><span class="nx">a</span><span class="o">=</span><span class="nx">arguments</span><span class="p">,</span><span class="nx">o</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="nx">u</span><span class="o">=</span><span class="kc">null</span><span class="p">,</span><span class="nx">r</span><span class="o">||</span><span class="p">(</span><span class="nx">e</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="nx">a</span><span class="p">))},</span><span class="nx">c</span><span class="o">=</span><span class="nx">r</span><span class="o">&amp;&amp;!</span><span class="nx">u</span><span class="p">;</span><span class="k">return</span> <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">u</span><span class="p">),</span><span class="nx">u</span><span class="o">=</span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">o</span><span class="p">,</span><span class="nx">t</span><span class="p">),</span><span class="nx">c</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">e</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="nx">a</span><span class="p">)),</span><span class="nx">e</span><span class="p">}},</span><span class="nx">j</span><span class="p">.</span><span class="nx">once</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="o">=!</span><span class="mi">1</span><span class="p">;</span><span class="k">return</span> <span class="kd">function</span><span class="p">(){</span><span class="k">return</span> <span class="nx">r</span><span class="o">?</span><span class="nx">t</span><span class="o">:</span><span class="p">(</span><span class="nx">r</span><span class="o">=!</span><span class="mi">0</span><span class="p">,</span><span class="nx">t</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">arguments</span><span class="p">),</span><span class="nx">n</span><span class="o">=</span><span class="kc">null</span><span class="p">,</span><span class="nx">t</span><span class="p">)}},</span><span class="nx">j</span><span class="p">.</span><span class="nx">wrap</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="k">return</span> <span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="p">[</span><span class="nx">n</span><span class="p">];</span><span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">arguments</span><span class="p">),</span><span class="nx">t</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">r</span><span class="p">)}},</span><span class="nx">j</span><span class="p">.</span><span class="nx">compose</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="nx">arguments</span><span class="p">;</span><span class="k">return</span> <span class="kd">function</span><span class="p">(){</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="nx">arguments</span><span class="p">,</span><span class="nx">r</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="nx">r</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="nx">r</span><span class="o">--</span><span class="p">)</span><span class="nx">t</span><span class="o">=</span><span class="p">[</span><span class="nx">n</span><span class="p">[</span><span class="nx">r</span><span class="p">].</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">t</span><span class="p">)];</span><span class="k">return</span> <span class="nx">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]}},</span><span class="nx">j</span><span class="p">.</span><span class="nx">after</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="k">return</span> <span class="kd">function</span><span class="p">(){</span><span class="k">return</span><span class="o">--</span><span class="nx">n</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">?</span><span class="nx">t</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">arguments</span><span class="p">)</span><span class="o">:</span><span class="k">void</span> <span class="mi">0</span><span class="p">}},</span><span class="nx">j</span><span class="p">.</span><span class="nx">keys</span><span class="o">=</span><span class="nx">_</span><span class="o">||</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nx">n</span><span class="o">!==</span><span class="nb">Object</span><span class="p">(</span><span class="nx">n</span><span class="p">))</span><span class="k">throw</span> <span class="k">new</span> <span class="nx">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid object&quot;</span><span class="p">);</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="p">[];</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">r</span> <span class="k">in</span> <span class="nx">n</span><span class="p">)</span><span class="nx">j</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">r</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="nx">t</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">r</span><span class="p">);</span><span class="k">return</span> <span class="nx">t</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">values</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="p">[];</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">r</span> <span class="k">in</span> <span class="nx">n</span><span class="p">)</span><span class="nx">j</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">r</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="nx">t</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">n</span><span class="p">[</span><span class="nx">r</span><span class="p">]);</span><span class="k">return</span> <span class="nx">t</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">pairs</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="p">[];</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">r</span> <span class="k">in</span> <span class="nx">n</span><span class="p">)</span><span class="nx">j</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">r</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="nx">t</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="nx">r</span><span class="p">,</span><span class="nx">n</span><span class="p">[</span><span class="nx">r</span><span class="p">]]);</span><span class="k">return</span> <span class="nx">t</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">invert</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="p">{};</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">r</span> <span class="k">in</span> <span class="nx">n</span><span class="p">)</span><span class="nx">j</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">r</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">t</span><span class="p">[</span><span class="nx">n</span><span class="p">[</span><span class="nx">r</span><span class="p">]]</span><span class="o">=</span><span class="nx">r</span><span class="p">);</span><span class="k">return</span> <span class="nx">t</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">functions</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">methods</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="p">[];</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">r</span> <span class="k">in</span> <span class="nx">n</span><span class="p">)</span><span class="nx">j</span><span class="p">.</span><span class="nx">isFunction</span><span class="p">(</span><span class="nx">n</span><span class="p">[</span><span class="nx">r</span><span class="p">])</span><span class="o">&amp;&amp;</span><span class="nx">t</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">r</span><span class="p">);</span><span class="k">return</span> <span class="nx">t</span><span class="p">.</span><span class="nx">sort</span><span class="p">()},</span><span class="nx">j</span><span class="p">.</span><span class="nx">extend</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">A</span><span class="p">(</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">r</span> <span class="k">in</span> <span class="nx">t</span><span class="p">)</span><span class="nx">n</span><span class="p">[</span><span class="nx">r</span><span class="p">]</span><span class="o">=</span><span class="nx">t</span><span class="p">[</span><span class="nx">r</span><span class="p">]}),</span><span class="nx">n</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">pick</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="p">{},</span><span class="nx">r</span><span class="o">=</span><span class="nx">c</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span><span class="k">return</span> <span class="nx">A</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">r</span><span class="p">){</span><span class="nx">r</span> <span class="k">in</span> <span class="nx">n</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">t</span><span class="p">[</span><span class="nx">r</span><span class="p">]</span><span class="o">=</span><span class="nx">n</span><span class="p">[</span><span class="nx">r</span><span class="p">])}),</span><span class="nx">t</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">omit</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="p">{},</span><span class="nx">r</span><span class="o">=</span><span class="nx">c</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">u</span> <span class="k">in</span> <span class="nx">n</span><span class="p">)</span><span class="nx">j</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">u</span><span class="p">)</span><span class="o">||</span><span class="p">(</span><span class="nx">t</span><span class="p">[</span><span class="nx">u</span><span class="p">]</span><span class="o">=</span><span class="nx">n</span><span class="p">[</span><span class="nx">u</span><span class="p">]);</span><span class="k">return</span> <span class="nx">t</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">defaults</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">A</span><span class="p">(</span><span class="nx">o</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">r</span> <span class="k">in</span> <span class="nx">t</span><span class="p">)</span><span class="nx">n</span><span class="p">[</span><span class="nx">r</span><span class="p">]</span><span class="o">===</span><span class="k">void</span> <span class="mi">0</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">n</span><span class="p">[</span><span class="nx">r</span><span class="p">]</span><span class="o">=</span><span class="nx">t</span><span class="p">[</span><span class="nx">r</span><span class="p">])}),</span><span class="nx">n</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">clone</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">isObject</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">?</span><span class="nx">j</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">?</span><span class="nx">n</span><span class="p">.</span><span class="nx">slice</span><span class="p">()</span><span class="o">:</span><span class="nx">j</span><span class="p">.</span><span class="nx">extend</span><span class="p">({},</span><span class="nx">n</span><span class="p">)</span><span class="o">:</span><span class="nx">n</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">tap</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="k">return</span> <span class="nx">t</span><span class="p">(</span><span class="nx">n</span><span class="p">),</span><span class="nx">n</span><span class="p">};</span><span class="kd">var</span> <span class="nx">S</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">,</span><span class="nx">e</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nx">n</span><span class="o">===</span><span class="nx">t</span><span class="p">)</span><span class="k">return</span> <span class="mi">0</span><span class="o">!==</span><span class="nx">n</span><span class="o">||</span><span class="mi">1</span><span class="o">/</span><span class="nx">n</span><span class="o">==</span><span class="mi">1</span><span class="o">/</span><span class="nx">t</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="kc">null</span><span class="o">==</span><span class="nx">n</span><span class="o">||</span><span class="kc">null</span><span class="o">==</span><span class="nx">t</span><span class="p">)</span><span class="k">return</span> <span class="nx">n</span><span class="o">===</span><span class="nx">t</span><span class="p">;</span><span class="nx">n</span> <span class="k">instanceof</span> <span class="nx">j</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">n</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">_wrapped</span><span class="p">),</span><span class="nx">t</span> <span class="k">instanceof</span> <span class="nx">j</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">t</span><span class="o">=</span><span class="nx">t</span><span class="p">.</span><span class="nx">_wrapped</span><span class="p">);</span><span class="kd">var</span> <span class="nx">u</span><span class="o">=</span><span class="nx">l</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">n</span><span class="p">);</span><span class="k">if</span><span class="p">(</span><span class="nx">u</span><span class="o">!=</span><span class="nx">l</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">t</span><span class="p">))</span><span class="k">return</span><span class="o">!</span><span class="mi">1</span><span class="p">;</span><span class="k">switch</span><span class="p">(</span><span class="nx">u</span><span class="p">){</span><span class="k">case</span><span class="s2">&quot;[object String]&quot;</span><span class="o">:</span><span class="k">return</span> <span class="nx">n</span><span class="o">==</span><span class="nb">String</span><span class="p">(</span><span class="nx">t</span><span class="p">);</span><span class="k">case</span><span class="s2">&quot;[object Number]&quot;</span><span class="o">:</span><span class="k">return</span> <span class="nx">n</span><span class="o">!=+</span><span class="nx">n</span><span class="o">?</span><span class="nx">t</span><span class="o">!=+</span><span class="nx">t</span><span class="o">:</span><span class="mi">0</span><span class="o">==</span><span class="nx">n</span><span class="o">?</span><span class="mi">1</span><span class="o">/</span><span class="nx">n</span><span class="o">==</span><span class="mi">1</span><span class="o">/</span><span class="nx">t</span><span class="o">:</span><span class="nx">n</span><span class="o">==+</span><span class="nx">t</span><span class="p">;</span><span class="k">case</span><span class="s2">&quot;[object Date]&quot;</span><span class="o">:</span><span class="k">case</span><span class="s2">&quot;[object Boolean]&quot;</span><span class="o">:</span><span class="k">return</span><span class="o">+</span><span class="nx">n</span><span class="o">==+</span><span class="nx">t</span><span class="p">;</span><span class="k">case</span><span class="s2">&quot;[object RegExp]&quot;</span><span class="o">:</span><span class="k">return</span> <span class="nx">n</span><span class="p">.</span><span class="nx">source</span><span class="o">==</span><span class="nx">t</span><span class="p">.</span><span class="nx">source</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">.</span><span class="nx">global</span><span class="o">==</span><span class="nx">t</span><span class="p">.</span><span class="nx">global</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">.</span><span class="nx">multiline</span><span class="o">==</span><span class="nx">t</span><span class="p">.</span><span class="nx">multiline</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="p">.</span><span class="nx">ignoreCase</span><span class="o">==</span><span class="nx">t</span><span class="p">.</span><span class="nx">ignoreCase</span><span class="p">}</span><span class="k">if</span><span class="p">(</span><span class="s2">&quot;object&quot;</span><span class="o">!=</span><span class="k">typeof</span> <span class="nx">n</span><span class="o">||</span><span class="s2">&quot;object&quot;</span><span class="o">!=</span><span class="k">typeof</span> <span class="nx">t</span><span class="p">)</span><span class="k">return</span><span class="o">!</span><span class="mi">1</span><span class="p">;</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="nx">r</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">--</span><span class="p">;)</span><span class="k">if</span><span class="p">(</span><span class="nx">r</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">==</span><span class="nx">n</span><span class="p">)</span><span class="k">return</span> <span class="nx">e</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">==</span><span class="nx">t</span><span class="p">;</span><span class="kd">var</span> <span class="nx">a</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">constructor</span><span class="p">,</span><span class="nx">o</span><span class="o">=</span><span class="nx">t</span><span class="p">.</span><span class="nx">constructor</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="nx">a</span><span class="o">!==</span><span class="nx">o</span><span class="o">&amp;&amp;!</span><span class="p">(</span><span class="nx">j</span><span class="p">.</span><span class="nx">isFunction</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="nx">a</span> <span class="k">instanceof</span> <span class="nx">a</span><span class="o">&amp;&amp;</span><span class="nx">j</span><span class="p">.</span><span class="nx">isFunction</span><span class="p">(</span><span class="nx">o</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="nx">o</span> <span class="k">instanceof</span> <span class="nx">o</span><span class="p">))</span><span class="k">return</span><span class="o">!</span><span class="mi">1</span><span class="p">;</span><span class="nx">r</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">n</span><span class="p">),</span><span class="nx">e</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">t</span><span class="p">);</span><span class="kd">var</span> <span class="nx">c</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="nx">f</span><span class="o">=!</span><span class="mi">0</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="s2">&quot;[object Array]&quot;</span><span class="o">==</span><span class="nx">u</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nx">c</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span><span class="nx">f</span><span class="o">=</span><span class="nx">c</span><span class="o">==</span><span class="nx">t</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="k">for</span><span class="p">(;</span><span class="nx">c</span><span class="o">--&amp;&amp;</span><span class="p">(</span><span class="nx">f</span><span class="o">=</span><span class="nx">S</span><span class="p">(</span><span class="nx">n</span><span class="p">[</span><span class="nx">c</span><span class="p">],</span><span class="nx">t</span><span class="p">[</span><span class="nx">c</span><span class="p">],</span><span class="nx">r</span><span class="p">,</span><span class="nx">e</span><span class="p">)););}</span><span class="k">else</span><span class="p">{</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">s</span> <span class="k">in</span> <span class="nx">n</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="nx">j</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">s</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">c</span><span class="o">++</span><span class="p">,</span><span class="o">!</span><span class="p">(</span><span class="nx">f</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">s</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="nx">S</span><span class="p">(</span><span class="nx">n</span><span class="p">[</span><span class="nx">s</span><span class="p">],</span><span class="nx">t</span><span class="p">[</span><span class="nx">s</span><span class="p">],</span><span class="nx">r</span><span class="p">,</span><span class="nx">e</span><span class="p">))))</span><span class="k">break</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="nx">f</span><span class="p">){</span><span class="k">for</span><span class="p">(</span><span class="nx">s</span> <span class="k">in</span> <span class="nx">t</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="nx">j</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">s</span><span class="p">)</span><span class="o">&amp;&amp;!</span><span class="nx">c</span><span class="o">--</span><span class="p">)</span><span class="k">break</span><span class="p">;</span><span class="nx">f</span><span class="o">=!</span><span class="nx">c</span><span class="p">}}</span><span class="k">return</span> <span class="nx">r</span><span class="p">.</span><span class="nx">pop</span><span class="p">(),</span><span class="nx">e</span><span class="p">.</span><span class="nx">pop</span><span class="p">(),</span><span class="nx">f</span><span class="p">};</span><span class="nx">j</span><span class="p">.</span><span class="nx">isEqual</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="k">return</span> <span class="nx">S</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,[],[])},</span><span class="nx">j</span><span class="p">.</span><span class="nx">isEmpty</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="kc">null</span><span class="o">==</span><span class="nx">n</span><span class="p">)</span><span class="k">return</span><span class="o">!</span><span class="mi">0</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="nx">j</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">||</span><span class="nx">j</span><span class="p">.</span><span class="nx">isString</span><span class="p">(</span><span class="nx">n</span><span class="p">))</span><span class="k">return</span> <span class="mi">0</span><span class="o">===</span><span class="nx">n</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">t</span> <span class="k">in</span> <span class="nx">n</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="nx">j</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">))</span><span class="k">return</span><span class="o">!</span><span class="mi">1</span><span class="p">;</span><span class="k">return</span><span class="o">!</span><span class="mi">0</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">isElement</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span><span class="o">!</span><span class="p">(</span><span class="o">!</span><span class="nx">n</span><span class="o">||</span><span class="mi">1</span><span class="o">!==</span><span class="nx">n</span><span class="p">.</span><span class="nx">nodeType</span><span class="p">)},</span><span class="nx">j</span><span class="p">.</span><span class="nx">isArray</span><span class="o">=</span><span class="nx">x</span><span class="o">||</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span><span class="s2">&quot;[object Array]&quot;</span><span class="o">==</span><span class="nx">l</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">n</span><span class="p">)},</span><span class="nx">j</span><span class="p">.</span><span class="nx">isObject</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">n</span><span class="o">===</span><span class="nb">Object</span><span class="p">(</span><span class="nx">n</span><span class="p">)},</span><span class="nx">A</span><span class="p">([</span><span class="s2">&quot;Arguments&quot;</span><span class="p">,</span><span class="s2">&quot;Function&quot;</span><span class="p">,</span><span class="s2">&quot;String&quot;</span><span class="p">,</span><span class="s2">&quot;Number&quot;</span><span class="p">,</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span><span class="s2">&quot;RegExp&quot;</span><span class="p">],</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="nx">j</span><span class="p">[</span><span class="s2">&quot;is&quot;</span><span class="o">+</span><span class="nx">n</span><span class="p">]</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">){</span><span class="k">return</span> <span class="nx">l</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span><span class="o">==</span><span class="s2">&quot;[object &quot;</span><span class="o">+</span><span class="nx">n</span><span class="o">+</span><span class="s2">&quot;]&quot;</span><span class="p">}}),</span><span class="nx">j</span><span class="p">.</span><span class="nx">isArguments</span><span class="p">(</span><span class="nx">arguments</span><span class="p">)</span><span class="o">||</span><span class="p">(</span><span class="nx">j</span><span class="p">.</span><span class="nx">isArguments</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span><span class="o">!</span><span class="p">(</span><span class="o">!</span><span class="nx">n</span><span class="o">||!</span><span class="nx">j</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="s2">&quot;callee&quot;</span><span class="p">))}),</span><span class="s2">&quot;function&quot;</span><span class="o">!=</span><span class="k">typeof</span><span class="sr">/./</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">j</span><span class="p">.</span><span class="nx">isFunction</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span><span class="s2">&quot;function&quot;</span><span class="o">==</span><span class="k">typeof</span> <span class="nx">n</span><span class="p">}),</span><span class="nx">j</span><span class="p">.</span><span class="nb">isFinite</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nb">isFinite</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">&amp;&amp;!</span><span class="nb">isNaN</span><span class="p">(</span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">n</span><span class="p">))},</span><span class="nx">j</span><span class="p">.</span><span class="nb">isNaN</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">isNumber</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="nx">n</span><span class="o">!=+</span><span class="nx">n</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">isBoolean</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">n</span><span class="o">===!</span><span class="mi">0</span><span class="o">||</span><span class="nx">n</span><span class="o">===!</span><span class="mi">1</span><span class="o">||</span><span class="s2">&quot;[object Boolean]&quot;</span><span class="o">==</span><span class="nx">l</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">n</span><span class="p">)},</span><span class="nx">j</span><span class="p">.</span><span class="nx">isNull</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="kc">null</span><span class="o">===</span><span class="nx">n</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">isUndefined</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">n</span><span class="o">===</span><span class="k">void</span> <span class="mi">0</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">has</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="k">return</span> <span class="nx">f</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">)},</span><span class="nx">j</span><span class="p">.</span><span class="nx">noConflict</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="k">return</span> <span class="nx">n</span><span class="p">.</span><span class="nx">_</span><span class="o">=</span><span class="nx">t</span><span class="p">,</span><span class="k">this</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">identity</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">n</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">times</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="nb">Array</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nx">n</span><span class="p">)),</span><span class="nx">u</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">n</span><span class="o">&gt;</span><span class="nx">u</span><span class="p">;</span><span class="nx">u</span><span class="o">++</span><span class="p">)</span><span class="nx">e</span><span class="p">[</span><span class="nx">u</span><span class="p">]</span><span class="o">=</span><span class="nx">t</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">u</span><span class="p">);</span><span class="k">return</span> <span class="nx">e</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">random</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="k">return</span> <span class="kc">null</span><span class="o">==</span><span class="nx">t</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">t</span><span class="o">=</span><span class="nx">n</span><span class="p">,</span><span class="nx">n</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span><span class="nx">n</span><span class="o">+</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="p">(</span><span class="nx">t</span><span class="o">-</span><span class="nx">n</span><span class="o">+</span><span class="mi">1</span><span class="p">))};</span><span class="kd">var</span> <span class="nx">I</span><span class="o">=</span><span class="p">{</span><span class="nx">escape</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;&amp;&quot;</span><span class="o">:</span><span class="s2">&quot;&amp;amp;&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;&quot;</span><span class="o">:</span><span class="s2">&quot;&amp;lt;&quot;</span><span class="p">,</span><span class="s2">&quot;&gt;&quot;</span><span class="o">:</span><span class="s2">&quot;&amp;gt;&quot;</span><span class="p">,</span><span class="s1">&#39;&quot;&#39;</span><span class="o">:</span><span class="s2">&quot;&amp;quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&#39;&quot;</span><span class="o">:</span><span class="s2">&quot;&amp;#x27;&quot;</span><span class="p">,</span><span class="s2">&quot;/&quot;</span><span class="o">:</span><span class="s2">&quot;&amp;#x2F;&quot;</span><span class="p">}};</span><span class="nx">I</span><span class="p">.</span><span class="nx">unescape</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">invert</span><span class="p">(</span><span class="nx">I</span><span class="p">.</span><span class="nx">escape</span><span class="p">);</span><span class="kd">var</span> <span class="nx">T</span><span class="o">=</span><span class="p">{</span><span class="nx">escape</span><span class="o">:</span><span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">&quot;[&quot;</span><span class="o">+</span><span class="nx">j</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">I</span><span class="p">.</span><span class="nx">escape</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;]&quot;</span><span class="p">,</span><span class="s2">&quot;g&quot;</span><span class="p">),</span><span class="nx">unescape</span><span class="o">:</span><span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">&quot;(&quot;</span><span class="o">+</span><span class="nx">j</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">I</span><span class="p">.</span><span class="nx">unescape</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;)&quot;</span><span class="p">,</span><span class="s2">&quot;g&quot;</span><span class="p">)};</span><span class="nx">j</span><span class="p">.</span><span class="nx">each</span><span class="p">([</span><span class="s2">&quot;escape&quot;</span><span class="p">,</span><span class="s2">&quot;unescape&quot;</span><span class="p">],</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="nx">j</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">){</span><span class="k">return</span> <span class="kc">null</span><span class="o">==</span><span class="nx">t</span><span class="o">?</span><span class="s2">&quot;&quot;</span><span class="o">:</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">+</span><span class="nx">t</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="nx">T</span><span class="p">[</span><span class="nx">n</span><span class="p">],</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">){</span><span class="k">return</span> <span class="nx">I</span><span class="p">[</span><span class="nx">n</span><span class="p">][</span><span class="nx">t</span><span class="p">]})}}),</span><span class="nx">j</span><span class="p">.</span><span class="nx">result</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="kc">null</span><span class="o">==</span><span class="nx">n</span><span class="p">)</span><span class="k">return</span> <span class="k">void</span> <span class="mi">0</span><span class="p">;</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="nx">n</span><span class="p">[</span><span class="nx">t</span><span class="p">];</span><span class="k">return</span> <span class="nx">j</span><span class="p">.</span><span class="nx">isFunction</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span><span class="o">?</span><span class="nx">r</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">:</span><span class="nx">r</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">mixin</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="nx">A</span><span class="p">(</span><span class="nx">j</span><span class="p">.</span><span class="nx">functions</span><span class="p">(</span><span class="nx">n</span><span class="p">),</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">){</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="nx">j</span><span class="p">[</span><span class="nx">t</span><span class="p">]</span><span class="o">=</span><span class="nx">n</span><span class="p">[</span><span class="nx">t</span><span class="p">];</span><span class="nx">j</span><span class="p">.</span><span class="nx">prototype</span><span class="p">[</span><span class="nx">t</span><span class="p">]</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">_wrapped</span><span class="p">];</span><span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">arguments</span><span class="p">),</span><span class="nx">z</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">r</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">j</span><span class="p">,</span><span class="nx">n</span><span class="p">))}})};</span><span class="kd">var</span> <span class="nx">N</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">j</span><span class="p">.</span><span class="nx">uniqueId</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=++</span><span class="nx">N</span><span class="o">+</span><span class="s2">&quot;&quot;</span><span class="p">;</span><span class="k">return</span> <span class="nx">n</span><span class="o">?</span><span class="nx">n</span><span class="o">+</span><span class="nx">t</span><span class="o">:</span><span class="nx">t</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">templateSettings</span><span class="o">=</span><span class="p">{</span><span class="nx">evaluate</span><span class="o">:</span><span class="sr">/&lt;%([\s\S]+?)%&gt;/g</span><span class="p">,</span><span class="nx">interpolate</span><span class="o">:</span><span class="sr">/&lt;%=([\s\S]+?)%&gt;/g</span><span class="p">,</span><span class="nx">escape</span><span class="o">:</span><span class="sr">/&lt;%-([\s\S]+?)%&gt;/g</span><span class="p">};</span><span class="kd">var</span> <span class="nx">q</span><span class="o">=</span><span class="sr">/(.)^/</span><span class="p">,</span><span class="nx">B</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;&#39;&quot;</span><span class="o">:</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span><span class="s2">&quot;\\&quot;</span><span class="o">:</span><span class="s2">&quot;\\&quot;</span><span class="p">,</span><span class="s2">&quot;\r&quot;</span><span class="o">:</span><span class="s2">&quot;r&quot;</span><span class="p">,</span><span class="s2">&quot;\n&quot;</span><span class="o">:</span><span class="s2">&quot;n&quot;</span><span class="p">,</span><span class="s2">&quot;	&quot;</span><span class="o">:</span><span class="s2">&quot;t&quot;</span><span class="p">,</span><span class="s2">&quot;\u2028&quot;</span><span class="o">:</span><span class="s2">&quot;u2028&quot;</span><span class="p">,</span><span class="s2">&quot;\u2029&quot;</span><span class="o">:</span><span class="s2">&quot;u2029&quot;</span><span class="p">},</span><span class="nx">D</span><span class="o">=</span><span class="sr">/\\|&#39;|\r|\n|\t|\u2028|\u2029/g</span><span class="p">;</span><span class="nx">j</span><span class="p">.</span><span class="nx">template</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="kd">var</span> <span class="nx">e</span><span class="p">;</span><span class="nx">r</span><span class="o">=</span><span class="nx">j</span><span class="p">.</span><span class="nx">defaults</span><span class="p">({},</span><span class="nx">r</span><span class="p">,</span><span class="nx">j</span><span class="p">.</span><span class="nx">templateSettings</span><span class="p">);</span><span class="kd">var</span> <span class="nx">u</span><span class="o">=</span><span class="k">new</span> <span class="nb">RegExp</span><span class="p">([(</span><span class="nx">r</span><span class="p">.</span><span class="nx">escape</span><span class="o">||</span><span class="nx">q</span><span class="p">).</span><span class="nx">source</span><span class="p">,(</span><span class="nx">r</span><span class="p">.</span><span class="nx">interpolate</span><span class="o">||</span><span class="nx">q</span><span class="p">).</span><span class="nx">source</span><span class="p">,(</span><span class="nx">r</span><span class="p">.</span><span class="nx">evaluate</span><span class="o">||</span><span class="nx">q</span><span class="p">).</span><span class="nx">source</span><span class="p">].</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;|$&quot;</span><span class="p">,</span><span class="s2">&quot;g&quot;</span><span class="p">),</span><span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="nx">a</span><span class="o">=</span><span class="s2">&quot;__p+=&#39;&quot;</span><span class="p">;</span><span class="nx">n</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">u</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">r</span><span class="p">,</span><span class="nx">e</span><span class="p">,</span><span class="nx">u</span><span class="p">,</span><span class="nx">o</span><span class="p">){</span><span class="k">return</span> <span class="nx">a</span><span class="o">+=</span><span class="nx">n</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="nx">o</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="nx">D</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span><span class="s2">&quot;\\&quot;</span><span class="o">+</span><span class="nx">B</span><span class="p">[</span><span class="nx">n</span><span class="p">]}),</span><span class="nx">r</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">a</span><span class="o">+=</span><span class="s2">&quot;&#39;+\n((__t=(&quot;</span><span class="o">+</span><span class="nx">r</span><span class="o">+</span><span class="s2">&quot;))==null?&#39;&#39;:_.escape(__t))+\n&#39;&quot;</span><span class="p">),</span><span class="nx">e</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">a</span><span class="o">+=</span><span class="s2">&quot;&#39;+\n((__t=(&quot;</span><span class="o">+</span><span class="nx">e</span><span class="o">+</span><span class="s2">&quot;))==null?&#39;&#39;:__t)+\n&#39;&quot;</span><span class="p">),</span><span class="nx">u</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="nx">a</span><span class="o">+=</span><span class="s2">&quot;&#39;;\n&quot;</span><span class="o">+</span><span class="nx">u</span><span class="o">+</span><span class="s2">&quot;\n__p+=&#39;&quot;</span><span class="p">),</span><span class="nx">i</span><span class="o">=</span><span class="nx">o</span><span class="o">+</span><span class="nx">t</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span><span class="nx">t</span><span class="p">}),</span><span class="nx">a</span><span class="o">+=</span><span class="s2">&quot;&#39;;\n&quot;</span><span class="p">,</span><span class="nx">r</span><span class="p">.</span><span class="nx">variable</span><span class="o">||</span><span class="p">(</span><span class="nx">a</span><span class="o">=</span><span class="s2">&quot;with(obj||{}){\n&quot;</span><span class="o">+</span><span class="nx">a</span><span class="o">+</span><span class="s2">&quot;}\n&quot;</span><span class="p">),</span><span class="nx">a</span><span class="o">=</span><span class="s2">&quot;var __t,__p=&#39;&#39;,__j=Array.prototype.join,&quot;</span><span class="o">+</span><span class="s2">&quot;print=function(){__p+=__j.call(arguments,&#39;&#39;);};\n&quot;</span><span class="o">+</span><span class="nx">a</span><span class="o">+</span><span class="s2">&quot;return __p;\n&quot;</span><span class="p">;</span><span class="k">try</span><span class="p">{</span><span class="nx">e</span><span class="o">=</span><span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">variable</span><span class="o">||</span><span class="s2">&quot;obj&quot;</span><span class="p">,</span><span class="s2">&quot;_&quot;</span><span class="p">,</span><span class="nx">a</span><span class="p">)}</span><span class="k">catch</span><span class="p">(</span><span class="nx">o</span><span class="p">){</span><span class="k">throw</span> <span class="nx">o</span><span class="p">.</span><span class="nx">source</span><span class="o">=</span><span class="nx">a</span><span class="p">,</span><span class="nx">o</span><span class="p">}</span><span class="k">if</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span><span class="k">return</span> <span class="nx">e</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="nx">j</span><span class="p">);</span><span class="kd">var</span> <span class="nx">c</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">e</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">j</span><span class="p">)};</span><span class="k">return</span> <span class="nx">c</span><span class="p">.</span><span class="nx">source</span><span class="o">=</span><span class="s2">&quot;function(&quot;</span><span class="o">+</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">variable</span><span class="o">||</span><span class="s2">&quot;obj&quot;</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;){\n&quot;</span><span class="o">+</span><span class="nx">a</span><span class="o">+</span><span class="s2">&quot;}&quot;</span><span class="p">,</span><span class="nx">c</span><span class="p">},</span><span class="nx">j</span><span class="p">.</span><span class="nx">chain</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="nx">j</span><span class="p">(</span><span class="nx">n</span><span class="p">).</span><span class="nx">chain</span><span class="p">()};</span><span class="kd">var</span> <span class="nx">z</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_chain</span><span class="o">?</span><span class="nx">j</span><span class="p">(</span><span class="nx">n</span><span class="p">).</span><span class="nx">chain</span><span class="p">()</span><span class="o">:</span><span class="nx">n</span><span class="p">};</span><span class="nx">j</span><span class="p">.</span><span class="nx">mixin</span><span class="p">(</span><span class="nx">j</span><span class="p">),</span><span class="nx">A</span><span class="p">([</span><span class="s2">&quot;pop&quot;</span><span class="p">,</span><span class="s2">&quot;push&quot;</span><span class="p">,</span><span class="s2">&quot;reverse&quot;</span><span class="p">,</span><span class="s2">&quot;shift&quot;</span><span class="p">,</span><span class="s2">&quot;sort&quot;</span><span class="p">,</span><span class="s2">&quot;splice&quot;</span><span class="p">,</span><span class="s2">&quot;unshift&quot;</span><span class="p">],</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="nx">e</span><span class="p">[</span><span class="nx">n</span><span class="p">];</span><span class="nx">j</span><span class="p">.</span><span class="nx">prototype</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">r</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">_wrapped</span><span class="p">;</span><span class="k">return</span> <span class="nx">t</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span><span class="nx">arguments</span><span class="p">),</span><span class="s2">&quot;shift&quot;</span><span class="o">!=</span><span class="nx">n</span><span class="o">&amp;&amp;</span><span class="s2">&quot;splice&quot;</span><span class="o">!=</span><span class="nx">n</span><span class="o">||</span><span class="mi">0</span><span class="o">!==</span><span class="nx">r</span><span class="p">.</span><span class="nx">length</span><span class="o">||</span><span class="k">delete</span> <span class="nx">r</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="nx">z</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">r</span><span class="p">)}}),</span><span class="nx">A</span><span class="p">([</span><span class="s2">&quot;concat&quot;</span><span class="p">,</span><span class="s2">&quot;join&quot;</span><span class="p">,</span><span class="s2">&quot;slice&quot;</span><span class="p">],</span><span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span><span class="kd">var</span> <span class="nx">t</span><span class="o">=</span><span class="nx">e</span><span class="p">[</span><span class="nx">n</span><span class="p">];</span><span class="nx">j</span><span class="p">.</span><span class="nx">prototype</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="k">return</span> <span class="nx">z</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">t</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_wrapped</span><span class="p">,</span><span class="nx">arguments</span><span class="p">))}}),</span><span class="nx">j</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">j</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,{</span><span class="nx">chain</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_chain</span><span class="o">=!</span><span class="mi">0</span><span class="p">,</span><span class="k">this</span><span class="p">},</span><span class="nx">value</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_wrapped</span><span class="p">}})}.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">);</span></div><div class='line' id='LC6'><span class="c1">//# sourceMappingURL=underscore-min.map</span></div></pre></div>
-            </td>
-          </tr>
-        </table>
-  </div>
-
-  </div>
-</div>
-
-<a href="#jump-to-line" rel="facebox[.linejump]" data-hotkey="l" class="js-jump-to-line" style="display:none">Jump to Line</a>
-<div id="jump-to-line" style="display:none">
-  <form accept-charset="UTF-8" class="js-jump-to-line-form">
-    <input class="linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" autofocus>
-    <button type="submit" class="button">Go</button>
-  </form>
-</div>
-
-        </div>
-
-      </div><!-- /.repo-container -->
-      <div class="modal-backdrop"></div>
-    </div><!-- /.container -->
-  </div><!-- /.site -->
-
-
-    </div><!-- /.wrapper -->
-
-      <div class="container">
-  <div class="site-footer">
-    <ul class="site-footer-links right">
-      <li><a href="https://status.github.com/">Status</a></li>
-      <li><a href="http://developer.github.com">API</a></li>
-      <li><a href="http://training.github.com">Training</a></li>
-      <li><a href="http://shop.github.com">Shop</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/about">About</a></li>
-
-    </ul>
-
-    <a href="/">
-      <span class="mega-octicon octicon-mark-github"></span>
-    </a>
-
-    <ul class="site-footer-links">
-      <li>&copy; 2013 <span title="0.05044s from github-fe126-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
-        <li><a href="/site/terms">Terms</a></li>
-        <li><a href="/site/privacy">Privacy</a></li>
-        <li><a href="/security">Security</a></li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
-  </div><!-- /.site-footer -->
-</div><!-- /.container -->
-
-
-    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
-  <div class="fullscreen-container js-fullscreen-container">
-    <div class="textarea-wrap">
-      <textarea name="fullscreen-contents" id="fullscreen-contents" class="js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
-          <div class="suggester-container">
-              <div class="suggester fullscreen-suggester js-navigation-container" id="fullscreen_suggester"
-                 data-url="/jashkenas/underscore/suggestions/commit">
-              </div>
-          </div>
-    </div>
-  </div>
-  <div class="fullscreen-sidebar">
-    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped leftwards" title="Exit Zen Mode">
-      <span class="mega-octicon octicon-screen-normal"></span>
-    </a>
-    <a href="#" class="theme-switcher js-theme-switcher tooltipped leftwards"
-      title="Switch themes">
-      <span class="octicon octicon-color-mode"></span>
-    </a>
-  </div>
-</div>
-
-
-
-    <div id="ajax-error-message" class="flash flash-error">
-      <span class="octicon octicon-alert"></span>
-      <a href="#" class="octicon octicon-remove-close close ajax-error-dismiss"></a>
-      Something went wrong with that request. Please try again.
-    </div>
-
-    
-  </body>
-</html>
-
+//     Underscore.js 1.5.1
+//     http://underscorejs.org
+//     (c) 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+//     Underscore may be freely distributed under the MIT license.
+
+(function() {
+
+  // Baseline setup
+  // --------------
+
+  // Establish the root object, `window` in the browser, or `global` on the server.
+  var root = this;
+
+  // Save the previous value of the `_` variable.
+  var previousUnderscore = root._;
+
+  // Establish the object that gets returned to break out of a loop iteration.
+  var breaker = {};
+
+  // Save bytes in the minified (but not gzipped) version:
+  var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;
+
+  // Create quick reference variables for speed access to core prototypes.
+  var
+    push             = ArrayProto.push,
+    slice            = ArrayProto.slice,
+    concat           = ArrayProto.concat,
+    toString         = ObjProto.toString,
+    hasOwnProperty   = ObjProto.hasOwnProperty;
+
+  // All **ECMAScript 5** native function implementations that we hope to use
+  // are declared here.
+  var
+    nativeForEach      = ArrayProto.forEach,
+    nativeMap          = ArrayProto.map,
+    nativeReduce       = ArrayProto.reduce,
+    nativeReduceRight  = ArrayProto.reduceRight,
+    nativeFilter       = ArrayProto.filter,
+    nativeEvery        = ArrayProto.every,
+    nativeSome         = ArrayProto.some,
+    nativeIndexOf      = ArrayProto.indexOf,
+    nativeLastIndexOf  = ArrayProto.lastIndexOf,
+    nativeIsArray      = Array.isArray,
+    nativeKeys         = Object.keys,
+    nativeBind         = FuncProto.bind;
+
+  // Create a safe reference to the Underscore object for use below.
+  var _ = function(obj) {
+    if (obj instanceof _) return obj;
+    if (!(this instanceof _)) return new _(obj);
+    this._wrapped = obj;
+  };
+
+  // Export the Underscore object for **Node.js**, with
+  // backwards-compatibility for the old `require()` API. If we're in
+  // the browser, add `_` as a global object via a string identifier,
+  // for Closure Compiler "advanced" mode.
+  if (typeof exports !== 'undefined') {
+    if (typeof module !== 'undefined' && module.exports) {
+      exports = module.exports = _;
+    }
+    exports._ = _;
+  } else {
+    root._ = _;
+  }
+
+  // Current version.
+  _.VERSION = '1.5.1';
+
+  // Collection Functions
+  // --------------------
+
+  // The cornerstone, an `each` implementation, aka `forEach`.
+  // Handles objects with the built-in `forEach`, arrays, and raw objects.
+  // Delegates to **ECMAScript 5**'s native `forEach` if available.
+  var each = _.each = _.forEach = function(obj, iterator, context) {
+    if (obj == null) return;
+    if (nativeForEach && obj.forEach === nativeForEach) {
+      obj.forEach(iterator, context);
+    } else if (obj.length === +obj.length) {
+      for (var i = 0, l = obj.length; i < l; i++) {
+        if (iterator.call(context, obj[i], i, obj) === breaker) return;
+      }
+    } else {
+      for (var key in obj) {
+        if (_.has(obj, key)) {
+          if (iterator.call(context, obj[key], key, obj) === breaker) return;
+        }
+      }
+    }
+  };
+
+  // Return the results of applying the iterator to each element.
+  // Delegates to **ECMAScript 5**'s native `map` if available.
+  _.map = _.collect = function(obj, iterator, context) {
+    var results = [];
+    if (obj == null) return results;
+    if (nativeMap && obj.map === nativeMap) return obj.map(iterator, context);
+    each(obj, function(value, index, list) {
+      results.push(iterator.call(context, value, index, list));
+    });
+    return results;
+  };
+
+  var reduceError = 'Reduce of empty array with no initial value';
+
+  // **Reduce** builds up a single result from a list of values, aka `inject`,
+  // or `foldl`. Delegates to **ECMAScript 5**'s native `reduce` if available.
+  _.reduce = _.foldl = _.inject = function(obj, iterator, memo, context) {
+    var initial = arguments.length > 2;
+    if (obj == null) obj = [];
+    if (nativeReduce && obj.reduce === nativeReduce) {
+      if (context) iterator = _.bind(iterator, context);
+      return initial ? obj.reduce(iterator, memo) : obj.reduce(iterator);
+    }
+    each(obj, function(value, index, list) {
+      if (!initial) {
+        memo = value;
+        initial = true;
+      } else {
+        memo = iterator.call(context, memo, value, index, list);
+      }
+    });
+    if (!initial) throw new TypeError(reduceError);
+    return memo;
+  };
+
+  // The right-associative version of reduce, also known as `foldr`.
+  // Delegates to **ECMAScript 5**'s native `reduceRight` if available.
+  _.reduceRight = _.foldr = function(obj, iterator, memo, context) {
+    var initial = arguments.length > 2;
+    if (obj == null) obj = [];
+    if (nativeReduceRight && obj.reduceRight === nativeReduceRight) {
+      if (context) iterator = _.bind(iterator, context);
+      return initial ? obj.reduceRight(iterator, memo) : obj.reduceRight(iterator);
+    }
+    var length = obj.length;
+    if (length !== +length) {
+      var keys = _.keys(obj);
+      length = keys.length;
+    }
+    each(obj, function(value, index, list) {
+      index = keys ? keys[--length] : --length;
+      if (!initial) {
+        memo = obj[index];
+        initial = true;
+      } else {
+        memo = iterator.call(context, memo, obj[index], index, list);
+      }
+    });
+    if (!initial) throw new TypeError(reduceError);
+    return memo;
+  };
+
+  // Return the first value which passes a truth test. Aliased as `detect`.
+  _.find = _.detect = function(obj, iterator, context) {
+    var result;
+    any(obj, function(value, index, list) {
+      if (iterator.call(context, value, index, list)) {
+        result = value;
+        return true;
+      }
+    });
+    return result;
+  };
+
+  // Return all the elements that pass a truth test.
+  // Delegates to **ECMAScript 5**'s native `filter` if available.
+  // Aliased as `select`.
+  _.filter = _.select = function(obj, iterator, context) {
+    var results = [];
+    if (obj == null) return results;
+    if (nativeFilter && obj.filter === nativeFilter) return obj.filter(iterator, context);
+    each(obj, function(value, index, list) {
+      if (iterator.call(context, value, index, list)) results.push(value);
+    });
+    return results;
+  };
+
+  // Return all the elements for which a truth test fails.
+  _.reject = function(obj, iterator, context) {
+    return _.filter(obj, function(value, index, list) {
+      return !iterator.call(context, value, index, list);
+    }, context);
+  };
+
+  // Determine whether all of the elements match a truth test.
+  // Delegates to **ECMAScript 5**'s native `every` if available.
+  // Aliased as `all`.
+  _.every = _.all = function(obj, iterator, context) {
+    iterator || (iterator = _.identity);
+    var result = true;
+    if (obj == null) return result;
+    if (nativeEvery && obj.every === nativeEvery) return obj.every(iterator, context);
+    each(obj, function(value, index, list) {
+      if (!(result = result && iterator.call(context, value, index, list))) return breaker;
+    });
+    return !!result;
+  };
+
+  // Determine if at least one element in the object matches a truth test.
+  // Delegates to **ECMAScript 5**'s native `some` if available.
+  // Aliased as `any`.
+  var any = _.some = _.any = function(obj, iterator, context) {
+    iterator || (iterator = _.identity);
+    var result = false;
+    if (obj == null) return result;
+    if (nativeSome && obj.some === nativeSome) return obj.some(iterator, context);
+    each(obj, function(value, index, list) {
+      if (result || (result = iterator.call(context, value, index, list))) return breaker;
+    });
+    return !!result;
+  };
+
+  // Determine if the array or object contains a given value (using `===`).
+  // Aliased as `include`.
+  _.contains = _.include = function(obj, target) {
+    if (obj == null) return false;
+    if (nativeIndexOf && obj.indexOf === nativeIndexOf) return obj.indexOf(target) != -1;
+    return any(obj, function(value) {
+      return value === target;
+    });
+  };
+
+  // Invoke a method (with arguments) on every item in a collection.
+  _.invoke = function(obj, method) {
+    var args = slice.call(arguments, 2);
+    var isFunc = _.isFunction(method);
+    return _.map(obj, function(value) {
+      return (isFunc ? method : value[method]).apply(value, args);
+    });
+  };
+
+  // Convenience version of a common use case of `map`: fetching a property.
+  _.pluck = function(obj, key) {
+    return _.map(obj, function(value){ return value[key]; });
+  };
+
+  // Convenience version of a common use case of `filter`: selecting only objects
+  // containing specific `key:value` pairs.
+  _.where = function(obj, attrs, first) {
+    if (_.isEmpty(attrs)) return first ? void 0 : [];
+    return _[first ? 'find' : 'filter'](obj, function(value) {
+      for (var key in attrs) {
+        if (attrs[key] !== value[key]) return false;
+      }
+      return true;
+    });
+  };
+
+  // Convenience version of a common use case of `find`: getting the first object
+  // containing specific `key:value` pairs.
+  _.findWhere = function(obj, attrs) {
+    return _.where(obj, attrs, true);
+  };
+
+  // Return the maximum element or (element-based computation).
+  // Can't optimize arrays of integers longer than 65,535 elements.
+  // See [WebKit Bug 80797](https://bugs.webkit.org/show_bug.cgi?id=80797)
+  _.max = function(obj, iterator, context) {
+    if (!iterator && _.isArray(obj) && obj[0] === +obj[0] && obj.length < 65535) {
+      return Math.max.apply(Math, obj);
+    }
+    if (!iterator && _.isEmpty(obj)) return -Infinity;
+    var result = {computed : -Infinity, value: -Infinity};
+    each(obj, function(value, index, list) {
+      var computed = iterator ? iterator.call(context, value, index, list) : value;
+      computed > result.computed && (result = {value : value, computed : computed});
+    });
+    return result.value;
+  };
+
+  // Return the minimum element (or element-based computation).
+  _.min = function(obj, iterator, context) {
+    if (!iterator && _.isArray(obj) && obj[0] === +obj[0] && obj.length < 65535) {
+      return Math.min.apply(Math, obj);
+    }
+    if (!iterator && _.isEmpty(obj)) return Infinity;
+    var result = {computed : Infinity, value: Infinity};
+    each(obj, function(value, index, list) {
+      var computed = iterator ? iterator.call(context, value, index, list) : value;
+      computed < result.computed && (result = {value : value, computed : computed});
+    });
+    return result.value;
+  };
+
+  // Shuffle an array.
+  _.shuffle = function(obj) {
+    var rand;
+    var index = 0;
+    var shuffled = [];
+    each(obj, function(value) {
+      rand = _.random(index++);
+      shuffled[index - 1] = shuffled[rand];
+      shuffled[rand] = value;
+    });
+    return shuffled;
+  };
+
+  // An internal function to generate lookup iterators.
+  var lookupIterator = function(value) {
+    return _.isFunction(value) ? value : function(obj){ return obj[value]; };
+  };
+
+  // Sort the object's values by a criterion produced by an iterator.
+  _.sortBy = function(obj, value, context) {
+    var iterator = lookupIterator(value);
+    return _.pluck(_.map(obj, function(value, index, list) {
+      return {
+        value : value,
+        index : index,
+        criteria : iterator.call(context, value, index, list)
+      };
+    }).sort(function(left, right) {
+      var a = left.criteria;
+      var b = right.criteria;
+      if (a !== b) {
+        if (a > b || a === void 0) return 1;
+        if (a < b || b === void 0) return -1;
+      }
+      return left.index < right.index ? -1 : 1;
+    }), 'value');
+  };
+
+  // An internal function used for aggregate "group by" operations.
+  var group = function(obj, value, context, behavior) {
+    var result = {};
+    var iterator = lookupIterator(value == null ? _.identity : value);
+    each(obj, function(value, index) {
+      var key = iterator.call(context, value, index, obj);
+      behavior(result, key, value);
+    });
+    return result;
+  };
+
+  // Groups the object's values by a criterion. Pass either a string attribute
+  // to group by, or a function that returns the criterion.
+  _.groupBy = function(obj, value, context) {
+    return group(obj, value, context, function(result, key, value) {
+      (_.has(result, key) ? result[key] : (result[key] = [])).push(value);
+    });
+  };
+
+  // Counts instances of an object that group by a certain criterion. Pass
+  // either a string attribute to count by, or a function that returns the
+  // criterion.
+  _.countBy = function(obj, value, context) {
+    return group(obj, value, context, function(result, key) {
+      if (!_.has(result, key)) result[key] = 0;
+      result[key]++;
+    });
+  };
+
+  // Use a comparator function to figure out the smallest index at which
+  // an object should be inserted so as to maintain order. Uses binary search.
+  _.sortedIndex = function(array, obj, iterator, context) {
+    iterator = iterator == null ? _.identity : lookupIterator(iterator);
+    var value = iterator.call(context, obj);
+    var low = 0, high = array.length;
+    while (low < high) {
+      var mid = (low + high) >>> 1;
+      iterator.call(context, array[mid]) < value ? low = mid + 1 : high = mid;
+    }
+    return low;
+  };
+
+  // Safely create a real, live array from anything iterable.
+  _.toArray = function(obj) {
+    if (!obj) return [];
+    if (_.isArray(obj)) return slice.call(obj);
+    if (obj.length === +obj.length) return _.map(obj, _.identity);
+    return _.values(obj);
+  };
+
+  // Return the number of elements in an object.
+  _.size = function(obj) {
+    if (obj == null) return 0;
+    return (obj.length === +obj.length) ? obj.length : _.keys(obj).length;
+  };
+
+  // Array Functions
+  // ---------------
+
+  // Get the first element of an array. Passing **n** will return the first N
+  // values in the array. Aliased as `head` and `take`. The **guard** check
+  // allows it to work with `_.map`.
+  _.first = _.head = _.take = function(array, n, guard) {
+    if (array == null) return void 0;
+    return (n != null) && !guard ? slice.call(array, 0, n) : array[0];
+  };
+
+  // Returns everything but the last entry of the array. Especially useful on
+  // the arguments object. Passing **n** will return all the values in
+  // the array, excluding the last N. The **guard** check allows it to work with
+  // `_.map`.
+  _.initial = function(array, n, guard) {
+    return slice.call(array, 0, array.length - ((n == null) || guard ? 1 : n));
+  };
+
+  // Get the last element of an array. Passing **n** will return the last N
+  // values in the array. The **guard** check allows it to work with `_.map`.
+  _.last = function(array, n, guard) {
+    if (array == null) return void 0;
+    if ((n != null) && !guard) {
+      return slice.call(array, Math.max(array.length - n, 0));
+    } else {
+      return array[array.length - 1];
+    }
+  };
+
+  // Returns everything but the first entry of the array. Aliased as `tail` and `drop`.
+  // Especially useful on the arguments object. Passing an **n** will return
+  // the rest N values in the array. The **guard**
+  // check allows it to work with `_.map`.
+  _.rest = _.tail = _.drop = function(array, n, guard) {
+    return slice.call(array, (n == null) || guard ? 1 : n);
+  };
+
+  // Trim out all falsy values from an array.
+  _.compact = function(array) {
+    return _.filter(array, _.identity);
+  };
+
+  // Internal implementation of a recursive `flatten` function.
+  var flatten = function(input, shallow, output) {
+    if (shallow && _.every(input, _.isArray)) {
+      return concat.apply(output, input);
+    }
+    each(input, function(value) {
+      if (_.isArray(value) || _.isArguments(value)) {
+        shallow ? push.apply(output, value) : flatten(value, shallow, output);
+      } else {
+        output.push(value);
+      }
+    });
+    return output;
+  };
+
+  // Return a completely flattened version of an array.
+  _.flatten = function(array, shallow) {
+    return flatten(array, shallow, []);
+  };
+
+  // Return a version of the array that does not contain the specified value(s).
+  _.without = function(array) {
+    return _.difference(array, slice.call(arguments, 1));
+  };
+
+  // Produce a duplicate-free version of the array. If the array has already
+  // been sorted, you have the option of using a faster algorithm.
+  // Aliased as `unique`.
+  _.uniq = _.unique = function(array, isSorted, iterator, context) {
+    if (_.isFunction(isSorted)) {
+      context = iterator;
+      iterator = isSorted;
+      isSorted = false;
+    }
+    var initial = iterator ? _.map(array, iterator, context) : array;
+    var results = [];
+    var seen = [];
+    each(initial, function(value, index) {
+      if (isSorted ? (!index || seen[seen.length - 1] !== value) : !_.contains(seen, value)) {
+        seen.push(value);
+        results.push(array[index]);
+      }
+    });
+    return results;
+  };
+
+  // Produce an array that contains the union: each distinct element from all of
+  // the passed-in arrays.
+  _.union = function() {
+    return _.uniq(_.flatten(arguments, true));
+  };
+
+  // Produce an array that contains every item shared between all the
+  // passed-in arrays.
+  _.intersection = function(array) {
+    var rest = slice.call(arguments, 1);
+    return _.filter(_.uniq(array), function(item) {
+      return _.every(rest, function(other) {
+        return _.indexOf(other, item) >= 0;
+      });
+    });
+  };
+
+  // Take the difference between one array and a number of other arrays.
+  // Only the elements present in just the first array will remain.
+  _.difference = function(array) {
+    var rest = concat.apply(ArrayProto, slice.call(arguments, 1));
+    return _.filter(array, function(value){ return !_.contains(rest, value); });
+  };
+
+  // Zip together multiple lists into a single array -- elements that share
+  // an index go together.
+  _.zip = function() {
+    var length = _.max(_.pluck(arguments, "length").concat(0));
+    var results = new Array(length);
+    for (var i = 0; i < length; i++) {
+      results[i] = _.pluck(arguments, '' + i);
+    }
+    return results;
+  };
+
+  // Converts lists into objects. Pass either a single array of `[key, value]`
+  // pairs, or two parallel arrays of the same length -- one of keys, and one of
+  // the corresponding values.
+  _.object = function(list, values) {
+    if (list == null) return {};
+    var result = {};
+    for (var i = 0, l = list.length; i < l; i++) {
+      if (values) {
+        result[list[i]] = values[i];
+      } else {
+        result[list[i][0]] = list[i][1];
+      }
+    }
+    return result;
+  };
+
+  // If the browser doesn't supply us with indexOf (I'm looking at you, **MSIE**),
+  // we need this function. Return the position of the first occurrence of an
+  // item in an array, or -1 if the item is not included in the array.
+  // Delegates to **ECMAScript 5**'s native `indexOf` if available.
+  // If the array is large and already in sort order, pass `true`
+  // for **isSorted** to use binary search.
+  _.indexOf = function(array, item, isSorted) {
+    if (array == null) return -1;
+    var i = 0, l = array.length;
+    if (isSorted) {
+      if (typeof isSorted == 'number') {
+        i = (isSorted < 0 ? Math.max(0, l + isSorted) : isSorted);
+      } else {
+        i = _.sortedIndex(array, item);
+        return array[i] === item ? i : -1;
+      }
+    }
+    if (nativeIndexOf && array.indexOf === nativeIndexOf) return array.indexOf(item, isSorted);
+    for (; i < l; i++) if (array[i] === item) return i;
+    return -1;
+  };
+
+  // Delegates to **ECMAScript 5**'s native `lastIndexOf` if available.
+  _.lastIndexOf = function(array, item, from) {
+    if (array == null) return -1;
+    var hasIndex = from != null;
+    if (nativeLastIndexOf && array.lastIndexOf === nativeLastIndexOf) {
+      return hasIndex ? array.lastIndexOf(item, from) : array.lastIndexOf(item);
+    }
+    var i = (hasIndex ? from : array.length);
+    while (i--) if (array[i] === item) return i;
+    return -1;
+  };
+
+  // Generate an integer Array containing an arithmetic progression. A port of
+  // the native Python `range()` function. See
+  // [the Python documentation](http://docs.python.org/library/functions.html#range).
+  _.range = function(start, stop, step) {
+    if (arguments.length <= 1) {
+      stop = start || 0;
+      start = 0;
+    }
+    step = arguments[2] || 1;
+
+    var len = Math.max(Math.ceil((stop - start) / step), 0);
+    var idx = 0;
+    var range = new Array(len);
+
+    while(idx < len) {
+      range[idx++] = start;
+      start += step;
+    }
+
+    return range;
+  };
+
+  // Function (ahem) Functions
+  // ------------------
+
+  // Reusable constructor function for prototype setting.
+  var ctor = function(){};
+
+  // Create a function bound to a given object (assigning `this`, and arguments,
+  // optionally). Delegates to **ECMAScript 5**'s native `Function.bind` if
+  // available.
+  _.bind = function(func, context) {
+    var args, bound;
+    if (nativeBind && func.bind === nativeBind) return nativeBind.apply(func, slice.call(arguments, 1));
+    if (!_.isFunction(func)) throw new TypeError;
+    args = slice.call(arguments, 2);
+    return bound = function() {
+      if (!(this instanceof bound)) return func.apply(context, args.concat(slice.call(arguments)));
+      ctor.prototype = func.prototype;
+      var self = new ctor;
+      ctor.prototype = null;
+      var result = func.apply(self, args.concat(slice.call(arguments)));
+      if (Object(result) === result) return result;
+      return self;
+    };
+  };
+
+  // Partially apply a function by creating a version that has had some of its
+  // arguments pre-filled, without changing its dynamic `this` context.
+  _.partial = function(func) {
+    var args = slice.call(arguments, 1);
+    return function() {
+      return func.apply(this, args.concat(slice.call(arguments)));
+    };
+  };
+
+  // Bind all of an object's methods to that object. Useful for ensuring that
+  // all callbacks defined on an object belong to it.
+  _.bindAll = function(obj) {
+    var funcs = slice.call(arguments, 1);
+    if (funcs.length === 0) throw new Error("bindAll must be passed function names");
+    each(funcs, function(f) { obj[f] = _.bind(obj[f], obj); });
+    return obj;
+  };
+
+  // Memoize an expensive function by storing its results.
+  _.memoize = function(func, hasher) {
+    var memo = {};
+    hasher || (hasher = _.identity);
+    return function() {
+      var key = hasher.apply(this, arguments);
+      return _.has(memo, key) ? memo[key] : (memo[key] = func.apply(this, arguments));
+    };
+  };
+
+  // Delays a function for the given number of milliseconds, and then calls
+  // it with the arguments supplied.
+  _.delay = function(func, wait) {
+    var args = slice.call(arguments, 2);
+    return setTimeout(function(){ return func.apply(null, args); }, wait);
+  };
+
+  // Defers a function, scheduling it to run after the current call stack has
+  // cleared.
+  _.defer = function(func) {
+    return _.delay.apply(_, [func, 1].concat(slice.call(arguments, 1)));
+  };
+
+  // Returns a function, that, when invoked, will only be triggered at most once
+  // during a given window of time. Normally, the throttled function will run
+  // as much as it can, without ever going more than once per `wait` duration;
+  // but if you'd like to disable the execution on the leading edge, pass
+  // `{leading: false}`. To disable execution on the trailing edge, ditto.
+  _.throttle = function(func, wait, options) {
+    var context, args, result;
+    var timeout = null;
+    var previous = 0;
+    options || (options = {});
+    var later = function() {
+      previous = options.leading === false ? 0 : new Date;
+      timeout = null;
+      result = func.apply(context, args);
+    };
+    return function() {
+      var now = new Date;
+      if (!previous && options.leading === false) previous = now;
+      var remaining = wait - (now - previous);
+      context = this;
+      args = arguments;
+      if (remaining <= 0) {
+        clearTimeout(timeout);
+        timeout = null;
+        previous = now;
+        result = func.apply(context, args);
+      } else if (!timeout && options.trailing !== false) {
+        timeout = setTimeout(later, remaining);
+      }
+      return result;
+    };
+  };
+
+  // Returns a function, that, as long as it continues to be invoked, will not
+  // be triggered. The function will be called after it stops being called for
+  // N milliseconds. If `immediate` is passed, trigger the function on the
+  // leading edge, instead of the trailing.
+  _.debounce = function(func, wait, immediate) {
+    var result;
+    var timeout = null;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) result = func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) result = func.apply(context, args);
+      return result;
+    };
+  };
+
+  // Returns a function that will be executed at most one time, no matter how
+  // often you call it. Useful for lazy initialization.
+  _.once = function(func) {
+    var ran = false, memo;
+    return function() {
+      if (ran) return memo;
+      ran = true;
+      memo = func.apply(this, arguments);
+      func = null;
+      return memo;
+    };
+  };
+
+  // Returns the first function passed as an argument to the second,
+  // allowing you to adjust arguments, run code before and after, and
+  // conditionally execute the original function.
+  _.wrap = function(func, wrapper) {
+    return function() {
+      var args = [func];
+      push.apply(args, arguments);
+      return wrapper.apply(this, args);
+    };
+  };
+
+  // Returns a function that is the composition of a list of functions, each
+  // consuming the return value of the function that follows.
+  _.compose = function() {
+    var funcs = arguments;
+    return function() {
+      var args = arguments;
+      for (var i = funcs.length - 1; i >= 0; i--) {
+        args = [funcs[i].apply(this, args)];
+      }
+      return args[0];
+    };
+  };
+
+  // Returns a function that will only be executed after being called N times.
+  _.after = function(times, func) {
+    return function() {
+      if (--times < 1) {
+        return func.apply(this, arguments);
+      }
+    };
+  };
+
+  // Object Functions
+  // ----------------
+
+  // Retrieve the names of an object's properties.
+  // Delegates to **ECMAScript 5**'s native `Object.keys`
+  _.keys = nativeKeys || function(obj) {
+    if (obj !== Object(obj)) throw new TypeError('Invalid object');
+    var keys = [];
+    for (var key in obj) if (_.has(obj, key)) keys.push(key);
+    return keys;
+  };
+
+  // Retrieve the values of an object's properties.
+  _.values = function(obj) {
+    var values = [];
+    for (var key in obj) if (_.has(obj, key)) values.push(obj[key]);
+    return values;
+  };
+
+  // Convert an object into a list of `[key, value]` pairs.
+  _.pairs = function(obj) {
+    var pairs = [];
+    for (var key in obj) if (_.has(obj, key)) pairs.push([key, obj[key]]);
+    return pairs;
+  };
+
+  // Invert the keys and values of an object. The values must be serializable.
+  _.invert = function(obj) {
+    var result = {};
+    for (var key in obj) if (_.has(obj, key)) result[obj[key]] = key;
+    return result;
+  };
+
+  // Return a sorted list of the function names available on the object.
+  // Aliased as `methods`
+  _.functions = _.methods = function(obj) {
+    var names = [];
+    for (var key in obj) {
+      if (_.isFunction(obj[key])) names.push(key);
+    }
+    return names.sort();
+  };
+
+  // Extend a given object with all the properties in passed-in object(s).
+  _.extend = function(obj) {
+    each(slice.call(arguments, 1), function(source) {
+      if (source) {
+        for (var prop in source) {
+          obj[prop] = source[prop];
+        }
+      }
+    });
+    return obj;
+  };
+
+  // Return a copy of the object only containing the whitelisted properties.
+  _.pick = function(obj) {
+    var copy = {};
+    var keys = concat.apply(ArrayProto, slice.call(arguments, 1));
+    each(keys, function(key) {
+      if (key in obj) copy[key] = obj[key];
+    });
+    return copy;
+  };
+
+   // Return a copy of the object without the blacklisted properties.
+  _.omit = function(obj) {
+    var copy = {};
+    var keys = concat.apply(ArrayProto, slice.call(arguments, 1));
+    for (var key in obj) {
+      if (!_.contains(keys, key)) copy[key] = obj[key];
+    }
+    return copy;
+  };
+
+  // Fill in a given object with default properties.
+  _.defaults = function(obj) {
+    each(slice.call(arguments, 1), function(source) {
+      if (source) {
+        for (var prop in source) {
+          if (obj[prop] === void 0) obj[prop] = source[prop];
+        }
+      }
+    });
+    return obj;
+  };
+
+  // Create a (shallow-cloned) duplicate of an object.
+  _.clone = function(obj) {
+    if (!_.isObject(obj)) return obj;
+    return _.isArray(obj) ? obj.slice() : _.extend({}, obj);
+  };
+
+  // Invokes interceptor with the obj, and then returns obj.
+  // The primary purpose of this method is to "tap into" a method chain, in
+  // order to perform operations on intermediate results within the chain.
+  _.tap = function(obj, interceptor) {
+    interceptor(obj);
+    return obj;
+  };
+
+  // Internal recursive comparison function for `isEqual`.
+  var eq = function(a, b, aStack, bStack) {
+    // Identical objects are equal. `0 === -0`, but they aren't identical.
+    // See the [Harmony `egal` proposal](http://wiki.ecmascript.org/doku.php?id=harmony:egal).
+    if (a === b) return a !== 0 || 1 / a == 1 / b;
+    // A strict comparison is necessary because `null == undefined`.
+    if (a == null || b == null) return a === b;
+    // Unwrap any wrapped objects.
+    if (a instanceof _) a = a._wrapped;
+    if (b instanceof _) b = b._wrapped;
+    // Compare `[[Class]]` names.
+    var className = toString.call(a);
+    if (className != toString.call(b)) return false;
+    switch (className) {
+      // Strings, numbers, dates, and booleans are compared by value.
+      case '[object String]':
+        // Primitives and their corresponding object wrappers are equivalent; thus, `"5"` is
+        // equivalent to `new String("5")`.
+        return a == String(b);
+      case '[object Number]':
+        // `NaN`s are equivalent, but non-reflexive. An `egal` comparison is performed for
+        // other numeric values.
+        return a != +a ? b != +b : (a == 0 ? 1 / a == 1 / b : a == +b);
+      case '[object Date]':
+      case '[object Boolean]':
+        // Coerce dates and booleans to numeric primitive values. Dates are compared by their
+        // millisecond representations. Note that invalid dates with millisecond representations
+        // of `NaN` are not equivalent.
+        return +a == +b;
+      // RegExps are compared by their source patterns and flags.
+      case '[object RegExp]':
+        return a.source == b.source &&
+               a.global == b.global &&
+               a.multiline == b.multiline &&
+               a.ignoreCase == b.ignoreCase;
+    }
+    if (typeof a != 'object' || typeof b != 'object') return false;
+    // Assume equality for cyclic structures. The algorithm for detecting cyclic
+    // structures is adapted from ES 5.1 section 15.12.3, abstract operation `JO`.
+    var length = aStack.length;
+    while (length--) {
+      // Linear search. Performance is inversely proportional to the number of
+      // unique nested structures.
+      if (aStack[length] == a) return bStack[length] == b;
+    }
+    // Objects with different constructors are not equivalent, but `Object`s
+    // from different frames are.
+    var aCtor = a.constructor, bCtor = b.constructor;
+    if (aCtor !== bCtor && !(_.isFunction(aCtor) && (aCtor instanceof aCtor) &&
+                             _.isFunction(bCtor) && (bCtor instanceof bCtor))) {
+      return false;
+    }
+    // Add the first object to the stack of traversed objects.
+    aStack.push(a);
+    bStack.push(b);
+    var size = 0, result = true;
+    // Recursively compare objects and arrays.
+    if (className == '[object Array]') {
+      // Compare array lengths to determine if a deep comparison is necessary.
+      size = a.length;
+      result = size == b.length;
+      if (result) {
+        // Deep compare the contents, ignoring non-numeric properties.
+        while (size--) {
+          if (!(result = eq(a[size], b[size], aStack, bStack))) break;
+        }
+      }
+    } else {
+      // Deep compare objects.
+      for (var key in a) {
+        if (_.has(a, key)) {
+          // Count the expected number of properties.
+          size++;
+          // Deep compare each member.
+          if (!(result = _.has(b, key) && eq(a[key], b[key], aStack, bStack))) break;
+        }
+      }
+      // Ensure that both objects contain the same number of properties.
+      if (result) {
+        for (key in b) {
+          if (_.has(b, key) && !(size--)) break;
+        }
+        result = !size;
+      }
+    }
+    // Remove the first object from the stack of traversed objects.
+    aStack.pop();
+    bStack.pop();
+    return result;
+  };
+
+  // Perform a deep comparison to check if two objects are equal.
+  _.isEqual = function(a, b) {
+    return eq(a, b, [], []);
+  };
+
+  // Is a given array, string, or object empty?
+  // An "empty" object has no enumerable own-properties.
+  _.isEmpty = function(obj) {
+    if (obj == null) return true;
+    if (_.isArray(obj) || _.isString(obj)) return obj.length === 0;
+    for (var key in obj) if (_.has(obj, key)) return false;
+    return true;
+  };
+
+  // Is a given value a DOM element?
+  _.isElement = function(obj) {
+    return !!(obj && obj.nodeType === 1);
+  };
+
+  // Is a given value an array?
+  // Delegates to ECMA5's native Array.isArray
+  _.isArray = nativeIsArray || function(obj) {
+    return toString.call(obj) == '[object Array]';
+  };
+
+  // Is a given variable an object?
+  _.isObject = function(obj) {
+    return obj === Object(obj);
+  };
+
+  // Add some isType methods: isArguments, isFunction, isString, isNumber, isDate, isRegExp.
+  each(['Arguments', 'Function', 'String', 'Number', 'Date', 'RegExp'], function(name) {
+    _['is' + name] = function(obj) {
+      return toString.call(obj) == '[object ' + name + ']';
+    };
+  });
+
+  // Define a fallback version of the method in browsers (ahem, IE), where
+  // there isn't any inspectable "Arguments" type.
+  if (!_.isArguments(arguments)) {
+    _.isArguments = function(obj) {
+      return !!(obj && _.has(obj, 'callee'));
+    };
+  }
+
+  // Optimize `isFunction` if appropriate.
+  if (typeof (/./) !== 'function') {
+    _.isFunction = function(obj) {
+      return typeof obj === 'function';
+    };
+  }
+
+  // Is a given object a finite number?
+  _.isFinite = function(obj) {
+    return isFinite(obj) && !isNaN(parseFloat(obj));
+  };
+
+  // Is the given value `NaN`? (NaN is the only number which does not equal itself).
+  _.isNaN = function(obj) {
+    return _.isNumber(obj) && obj != +obj;
+  };
+
+  // Is a given value a boolean?
+  _.isBoolean = function(obj) {
+    return obj === true || obj === false || toString.call(obj) == '[object Boolean]';
+  };
+
+  // Is a given value equal to null?
+  _.isNull = function(obj) {
+    return obj === null;
+  };
+
+  // Is a given variable undefined?
+  _.isUndefined = function(obj) {
+    return obj === void 0;
+  };
+
+  // Shortcut function for checking if an object has a given property directly
+  // on itself (in other words, not on a prototype).
+  _.has = function(obj, key) {
+    return hasOwnProperty.call(obj, key);
+  };
+
+  // Utility Functions
+  // -----------------
+
+  // Run Underscore.js in *noConflict* mode, returning the `_` variable to its
+  // previous owner. Returns a reference to the Underscore object.
+  _.noConflict = function() {
+    root._ = previousUnderscore;
+    return this;
+  };
+
+  // Keep the identity function around for default iterators.
+  _.identity = function(value) {
+    return value;
+  };
+
+  // Run a function **n** times.
+  _.times = function(n, iterator, context) {
+    var accum = Array(Math.max(0, n));
+    for (var i = 0; i < n; i++) accum[i] = iterator.call(context, i);
+    return accum;
+  };
+
+  // Return a random integer between min and max (inclusive).
+  _.random = function(min, max) {
+    if (max == null) {
+      max = min;
+      min = 0;
+    }
+    return min + Math.floor(Math.random() * (max - min + 1));
+  };
+
+  // List of HTML entities for escaping.
+  var entityMap = {
+    escape: {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#x27;',
+      '/': '&#x2F;'
+    }
+  };
+  entityMap.unescape = _.invert(entityMap.escape);
+
+  // Regexes containing the keys and values listed immediately above.
+  var entityRegexes = {
+    escape:   new RegExp('[' + _.keys(entityMap.escape).join('') + ']', 'g'),
+    unescape: new RegExp('(' + _.keys(entityMap.unescape).join('|') + ')', 'g')
+  };
+
+  // Functions for escaping and unescaping strings to/from HTML interpolation.
+  _.each(['escape', 'unescape'], function(method) {
+    _[method] = function(string) {
+      if (string == null) return '';
+      return ('' + string).replace(entityRegexes[method], function(match) {
+        return entityMap[method][match];
+      });
+    };
+  });
+
+  // If the value of the named `property` is a function then invoke it with the
+  // `object` as context; otherwise, return it.
+  _.result = function(object, property) {
+    if (object == null) return void 0;
+    var value = object[property];
+    return _.isFunction(value) ? value.call(object) : value;
+  };
+
+  // Add your own custom functions to the Underscore object.
+  _.mixin = function(obj) {
+    each(_.functions(obj), function(name){
+      var func = _[name] = obj[name];
+      _.prototype[name] = function() {
+        var args = [this._wrapped];
+        push.apply(args, arguments);
+        return result.call(this, func.apply(_, args));
+      };
+    });
+  };
+
+  // Generate a unique integer id (unique within the entire client session).
+  // Useful for temporary DOM ids.
+  var idCounter = 0;
+  _.uniqueId = function(prefix) {
+    var id = ++idCounter + '';
+    return prefix ? prefix + id : id;
+  };
+
+  // By default, Underscore uses ERB-style template delimiters, change the
+  // following template settings to use alternative delimiters.
+  _.templateSettings = {
+    evaluate    : /<%([\s\S]+?)%>/g,
+    interpolate : /<%=([\s\S]+?)%>/g,
+    escape      : /<%-([\s\S]+?)%>/g
+  };
+
+  // When customizing `templateSettings`, if you don't want to define an
+  // interpolation, evaluation or escaping regex, we need one that is
+  // guaranteed not to match.
+  var noMatch = /(.)^/;
+
+  // Certain characters need to be escaped so that they can be put into a
+  // string literal.
+  var escapes = {
+    "'":      "'",
+    '\\':     '\\',
+    '\r':     'r',
+    '\n':     'n',
+    '\t':     't',
+    '\u2028': 'u2028',
+    '\u2029': 'u2029'
+  };
+
+  var escaper = /\\|'|\r|\n|\t|\u2028|\u2029/g;
+
+  // JavaScript micro-templating, similar to John Resig's implementation.
+  // Underscore templating handles arbitrary delimiters, preserves whitespace,
+  // and correctly escapes quotes within interpolated code.
+  _.template = function(text, data, settings) {
+    var render;
+    settings = _.defaults({}, settings, _.templateSettings);
+
+    // Combine delimiters into one regular expression via alternation.
+    var matcher = new RegExp([
+      (settings.escape || noMatch).source,
+      (settings.interpolate || noMatch).source,
+      (settings.evaluate || noMatch).source
+    ].join('|') + '|$', 'g');
+
+    // Compile the template source, escaping string literals appropriately.
+    var index = 0;
+    var source = "__p+='";
+    text.replace(matcher, function(match, escape, interpolate, evaluate, offset) {
+      source += text.slice(index, offset)
+        .replace(escaper, function(match) { return '\\' + escapes[match]; });
+
+      if (escape) {
+        source += "'+\n((__t=(" + escape + "))==null?'':_.escape(__t))+\n'";
+      }
+      if (interpolate) {
+        source += "'+\n((__t=(" + interpolate + "))==null?'':__t)+\n'";
+      }
+      if (evaluate) {
+        source += "';\n" + evaluate + "\n__p+='";
+      }
+      index = offset + match.length;
+      return match;
+    });
+    source += "';\n";
+
+    // If a variable is not specified, place data values in local scope.
+    if (!settings.variable) source = 'with(obj||{}){\n' + source + '}\n';
+
+    source = "var __t,__p='',__j=Array.prototype.join," +
+      "print=function(){__p+=__j.call(arguments,'');};\n" +
+      source + "return __p;\n";
+
+    try {
+      render = new Function(settings.variable || 'obj', '_', source);
+    } catch (e) {
+      e.source = source;
+      throw e;
+    }
+
+    if (data) return render(data, _);
+    var template = function(data) {
+      return render.call(this, data, _);
+    };
+
+    // Provide the compiled function source as a convenience for precompilation.
+    template.source = 'function(' + (settings.variable || 'obj') + '){\n' + source + '}';
+
+    return template;
+  };
+
+  // Add a "chain" function, which will delegate to the wrapper.
+  _.chain = function(obj) {
+    return _(obj).chain();
+  };
+
+  // OOP
+  // ---------------
+  // If Underscore is called as a function, it returns a wrapped object that
+  // can be used OO-style. This wrapper holds altered versions of all the
+  // underscore functions. Wrapped objects may be chained.
+
+  // Helper function to continue chaining intermediate results.
+  var result = function(obj) {
+    return this._chain ? _(obj).chain() : obj;
+  };
+
+  // Add all of the Underscore functions to the wrapper object.
+  _.mixin(_);
+
+  // Add all mutator Array functions to the wrapper.
+  each(['pop', 'push', 'reverse', 'shift', 'sort', 'splice', 'unshift'], function(name) {
+    var method = ArrayProto[name];
+    _.prototype[name] = function() {
+      var obj = this._wrapped;
+      method.apply(obj, arguments);
+      if ((name == 'shift' || name == 'splice') && obj.length === 0) delete obj[0];
+      return result.call(this, obj);
+    };
+  });
+
+  // Add all accessor Array functions to the wrapper.
+  each(['concat', 'join', 'slice'], function(name) {
+    var method = ArrayProto[name];
+    _.prototype[name] = function() {
+      return result.call(this, method.apply(this._wrapped, arguments));
+    };
+  });
+
+  _.extend(_.prototype, {
+
+    // Start chaining a wrapped Underscore object.
+    chain: function() {
+      this._chain = true;
+      return this;
+    },
+
+    // Extracts the result from a wrapped and chained object.
+    value: function() {
+      return this._wrapped;
+    }
+
+  });
+
+}).call(this);
