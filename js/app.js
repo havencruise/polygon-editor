@@ -1,4 +1,5 @@
-require(['app/model', 'app/view', 'app/Vertex'], function(model, view, Vertex){
+require(['app/model', 'app/view', 'app/controller', 'app/Vertex'], 
+  function(model, view, controller, Vertex){
     model.on('add', function(){
         console.log('added');
     });
@@ -7,5 +8,4 @@ require(['app/model', 'app/view', 'app/Vertex'], function(model, view, Vertex){
         x: 100, 
         y: 100,
     }));
-
 });
