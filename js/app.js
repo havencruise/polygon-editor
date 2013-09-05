@@ -6,6 +6,6 @@ require(['app/model', 'app/view', 'app/controller', 'app/Vertex'],
 
     model.add(new Vertex({
         x: 100, 
-        y: 100,
+        y: 100
     }));
 });
