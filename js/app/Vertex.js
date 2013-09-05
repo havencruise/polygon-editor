@@ -5,7 +5,6 @@ define([], function(){
             var dx = x - this.get('x'),
                 dy = y - this.get('y'),
                 distance = Math.sqrt(dx*dx + dy*dy);
-
             return distance <= radius; 
         },
         radius: radius
